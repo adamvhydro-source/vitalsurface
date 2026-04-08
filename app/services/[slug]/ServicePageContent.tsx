@@ -12,7 +12,7 @@ export default function ServicePageContent({ service }: { service: Service }) {
       <section style={{
         paddingTop: '10rem',
         paddingBottom: '5rem',
-        background: 'var(--bg)',
+        background: 'var(--bg-primary)',
         borderBottom: '1px solid var(--border)',
         padding: '10rem 2rem 5rem',
       }}>
@@ -29,7 +29,7 @@ export default function ServicePageContent({ service }: { service: Service }) {
             initial={{ width: 0 }}
             animate={{ width: '48px' }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            style={{ display: 'block', height: '2px', background: 'var(--gold)', marginBottom: '1.5rem' }}
+            style={{ display: 'block', height: '2px', background: 'var(--accent-bronze)', marginBottom: '1.5rem' }}
           />
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -50,7 +50,7 @@ export default function ServicePageContent({ service }: { service: Service }) {
       </section>
 
       {/* Intro */}
-      <section style={{ padding: '6rem 2rem', background: 'var(--bg)' }}>
+      <section style={{ padding: '6rem 2rem', background: 'var(--bg-primary)' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -73,7 +73,7 @@ export default function ServicePageContent({ service }: { service: Service }) {
       {/* What We Cover */}
       <section style={{
         padding: '5rem 2rem 7rem',
-        background: 'var(--surface)',
+        background: 'var(--bg-secondary)',
         borderTop: '1px solid var(--border)',
       }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -107,7 +107,7 @@ export default function ServicePageContent({ service }: { service: Service }) {
                     gap: '1rem',
                     fontFamily: 'var(--font-cormorant)',
                     fontSize: '1.1rem',
-                    color: 'var(--text-muted)',
+                    color: 'var(--text-secondary)',
                     lineHeight: 1.6,
                   }}
                 >
@@ -115,7 +115,7 @@ export default function ServicePageContent({ service }: { service: Service }) {
                     display: 'block',
                     width: '8px',
                     height: '8px',
-                    background: 'var(--gold)',
+                    background: 'var(--accent-bronze)',
                     marginTop: '0.45em',
                     flexShrink: 0,
                   }} />

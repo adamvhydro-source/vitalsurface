@@ -66,7 +66,7 @@ export default function Navbar() {
   return (
     <>
       <motion.nav
-        animate={{ backgroundColor: scrolled ? 'rgba(247,245,241,0.95)' : 'rgba(247,245,241,0)' }}
+        animate={{ backgroundColor: scrolled ? 'rgba(15,14,12,0.95)' : 'rgba(15,14,12,0)' }}
         transition={{ duration: 0.3 }}
         style={{
           position: 'fixed',
@@ -90,7 +90,7 @@ export default function Navbar() {
           <Link href="/" style={{
             fontFamily: 'var(--font-bebas)',
             fontSize: '1.6rem',
-            color: 'var(--gold)',
+            color: 'var(--accent-bronze)',
             letterSpacing: '0.1em',
             lineHeight: 1,
           }}>
@@ -134,7 +134,7 @@ export default function Navbar() {
                       position: 'absolute',
                       top: 'calc(100% + 1rem)',
                       left: '-1rem',
-                      background: 'var(--bg)',
+                      background: 'var(--bg-surface)',
                       border: '1px solid var(--border)',
                       minWidth: '240px',
                       padding: '0.5rem 0',
@@ -154,7 +154,7 @@ export default function Navbar() {
                           transition: 'color 0.15s, padding-left 0.15s',
                         }}
                         onMouseEnter={e => {
-                          (e.target as HTMLElement).style.color = 'var(--gold)'
+                          (e.target as HTMLElement).style.color = 'var(--accent-bronze)'
                           ;(e.target as HTMLElement).style.paddingLeft = '1.6rem'
                         }}
                         onMouseLeave={e => {
@@ -205,7 +205,7 @@ export default function Navbar() {
                       position: 'absolute',
                       top: 'calc(100% + 1rem)',
                       left: '-1rem',
-                      background: 'var(--bg)',
+                      background: 'var(--bg-surface)',
                       border: '1px solid var(--border)',
                       minWidth: '240px',
                       padding: '0.5rem 0',
@@ -225,7 +225,7 @@ export default function Navbar() {
                           transition: 'color 0.15s, padding-left 0.15s',
                         }}
                         onMouseEnter={e => {
-                          (e.target as HTMLElement).style.color = 'var(--gold)'
+                          (e.target as HTMLElement).style.color = 'var(--accent-bronze)'
                           ;(e.target as HTMLElement).style.paddingLeft = '1.6rem'
                         }}
                         onMouseLeave={e => {
@@ -250,7 +250,7 @@ export default function Navbar() {
                 color: 'var(--text-primary)',
                 transition: 'color 0.15s',
               }}
-              onMouseEnter={e => (e.target as HTMLElement).style.color = 'var(--gold)'}
+              onMouseEnter={e => (e.target as HTMLElement).style.color = 'var(--accent-bronze)'}
               onMouseLeave={e => (e.target as HTMLElement).style.color = 'var(--text-primary)'}
             >
               Our Work
@@ -288,7 +288,7 @@ export default function Navbar() {
             style={{
               position: 'fixed',
               inset: 0,
-              background: 'var(--bg)',
+              background: 'var(--bg-secondary)',
               zIndex: 2000,
               display: 'flex',
               flexDirection: 'column',
@@ -300,7 +300,7 @@ export default function Navbar() {
               <Link
                 href="/"
                 onClick={() => setMobileOpen(false)}
-                style={{ fontFamily: 'var(--font-bebas)', fontSize: '1.6rem', color: 'var(--gold)', letterSpacing: '0.1em' }}
+                style={{ fontFamily: 'var(--font-bebas)', fontSize: '1.6rem', color: 'var(--accent-bronze)', letterSpacing: '0.1em' }}
               >
                 Vital Surface
               </Link>
@@ -317,7 +317,7 @@ export default function Navbar() {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
               <div style={{ marginBottom: '2rem' }}>
-                <p style={{ fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--gold)', marginBottom: '1rem' }}>SERVICES</p>
+                <p style={{ fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--accent-bronze)', marginBottom: '1rem' }}>SERVICES</p>
                 {serviceLinks.map((link) => (
                   <Link
                     key={link.href}
@@ -337,7 +337,7 @@ export default function Navbar() {
                 ))}
               </div>
               <div style={{ marginBottom: '2rem' }}>
-                <p style={{ fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--gold)', marginBottom: '1rem' }}>SECTORS</p>
+                <p style={{ fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--accent-bronze)', marginBottom: '1rem' }}>SECTORS</p>
                 {sectorLinks.map((link) => (
                   <Link
                     key={link.href}

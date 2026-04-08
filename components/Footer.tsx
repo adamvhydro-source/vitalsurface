@@ -23,8 +23,8 @@ const sectorLinks = [
 export default function Footer() {
   return (
     <footer style={{
-      background: 'var(--surface)',
-      borderTop: '1px solid var(--gold)',
+      background: 'var(--bg-surface)',
+      borderTop: '1px solid var(--accent-bronze)',
       paddingTop: '4rem',
       paddingBottom: '2rem',
     }}>
@@ -44,7 +44,7 @@ export default function Footer() {
             <p style={{
               fontFamily: 'var(--font-bebas)',
               fontSize: '1.5rem',
-              color: 'var(--gold)',
+              color: 'var(--accent-bronze)',
               letterSpacing: '0.1em',
               marginBottom: '1rem',
               margin: '0 0 1rem 0',
@@ -64,7 +64,7 @@ export default function Footer() {
             <p style={{
               fontFamily: 'var(--font-cormorant)',
               fontSize: '0.95rem',
-              color: 'var(--text-muted)',
+              color: 'var(--text-secondary)',
               lineHeight: 1.6,
             }}>
               Commercial surface finishing<br />
@@ -78,7 +78,7 @@ export default function Footer() {
               fontFamily: 'var(--font-bebas)',
               fontSize: '0.75rem',
               letterSpacing: '0.2em',
-              color: 'var(--gold)',
+              color: 'var(--accent-bronze)',
               marginBottom: '1.25rem',
             }}>
               SERVICES
@@ -91,11 +91,11 @@ export default function Footer() {
                     style={{
                       fontFamily: 'var(--font-cormorant)',
                       fontSize: '1rem',
-                      color: 'var(--text-muted)',
+                      color: 'var(--text-secondary)',
                       transition: 'color 0.15s',
                     }}
                     onMouseEnter={e => (e.target as HTMLElement).style.color = 'var(--text-primary)'}
-                    onMouseLeave={e => (e.target as HTMLElement).style.color = 'var(--text-muted)'}
+                    onMouseLeave={e => (e.target as HTMLElement).style.color = 'var(--text-secondary)'}
                   >
                     {link.label}
                   </Link>
@@ -110,7 +110,7 @@ export default function Footer() {
               fontFamily: 'var(--font-bebas)',
               fontSize: '0.75rem',
               letterSpacing: '0.2em',
-              color: 'var(--gold)',
+              color: 'var(--accent-bronze)',
               marginBottom: '1.25rem',
             }}>
               SECTORS
@@ -123,11 +123,11 @@ export default function Footer() {
                     style={{
                       fontFamily: 'var(--font-cormorant)',
                       fontSize: '1rem',
-                      color: 'var(--text-muted)',
+                      color: 'var(--text-secondary)',
                       transition: 'color 0.15s',
                     }}
                     onMouseEnter={e => (e.target as HTMLElement).style.color = 'var(--text-primary)'}
-                    onMouseLeave={e => (e.target as HTMLElement).style.color = 'var(--text-muted)'}
+                    onMouseLeave={e => (e.target as HTMLElement).style.color = 'var(--text-secondary)'}
                   >
                     {link.label}
                   </Link>
@@ -142,22 +142,22 @@ export default function Footer() {
               fontFamily: 'var(--font-bebas)',
               fontSize: '0.75rem',
               letterSpacing: '0.2em',
-              color: 'var(--gold)',
+              color: 'var(--accent-bronze)',
               marginBottom: '1.25rem',
             }}>
               CONTACT
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <p style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1rem', color: 'var(--text-muted)', margin: 0 }}>
+              <p style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1rem', color: 'var(--text-secondary)', margin: 0 }}>
                 Stone, Staffordshire
               </p>
-              <p style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1rem', color: 'var(--text-muted)', margin: 0 }}>
+              <p style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1rem', color: 'var(--text-secondary)', margin: 0 }}>
                 Serving the Midlands<br />and beyond.
               </p>
               <Link href="/contact" style={{
                 fontFamily: 'var(--font-cormorant)',
                 fontSize: '1rem',
-                color: 'var(--gold)',
+                color: 'var(--accent-bronze)',
                 transition: 'opacity 0.15s',
               }}>
                 Get in touch →
@@ -179,7 +179,7 @@ export default function Footer() {
           <p style={{
             fontFamily: 'var(--font-cormorant)',
             fontSize: '0.9rem',
-            color: 'var(--text-muted)',
+            color: 'var(--text-secondary)',
             margin: 0,
           }}>
             © 2026 Vital Surface. All rights reserved.
@@ -187,7 +187,7 @@ export default function Footer() {
           <p style={{
             fontFamily: 'var(--font-cormorant)',
             fontSize: '0.9rem',
-            color: 'var(--text-muted)',
+            color: 'var(--text-secondary)',
             margin: 0,
           }}>
             Stone, Staffordshire

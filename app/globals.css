@@ -1,30 +1,37 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #f7f5f1;
-  --surface: #ede9e3;
-  --border: #d5cfc7;
-  --gold: #8b5e3c;
-  --accent: #2d4a3e;
-  --text-primary: #1c1a17;
-  --text-muted: #7a7470;
+  --bg-primary: #0f0e0c;
+  --bg-secondary: #1a1815;
+  --bg-surface: #242220;
+  --text-primary: #f2ede6;
+  --text-secondary: #a09890;
+  --text-muted: #6b6560;
+  --accent-bronze: #8c6d3f;
+  --accent-bronze-hover: #7a5e34;
+  --accent-olive: #3d4a2e;
+  --accent-olive-hover: #2f3a22;
+  --border: rgba(242,237,230,0.08);
+  --border-strong: rgba(242,237,230,0.15);
   --font-display: var(--font-bebas);
   --font-body: var(--font-cormorant);
 }
 
 @theme inline {
-  --color-bg: var(--bg);
-  --color-surface: var(--surface);
-  --color-border: var(--border);
-  --color-gold: var(--gold);
-  --color-accent: var(--accent);
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-surface: var(--bg-surface);
   --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
+  --color-accent-bronze: var(--accent-bronze);
+  --color-accent-olive: var(--accent-olive);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
 }
 
 * {
   box-sizing: border-box;
-  border-radius: 0 !important;
 }
 
 html {
@@ -32,7 +39,7 @@ html {
 }
 
 body {
-  background: var(--bg);
+  background: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-cormorant), Georgia, serif;
   margin: 0;
@@ -57,8 +64,9 @@ button {
 }
 
 input, textarea, select {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 0;
   color: var(--text-primary);
   font-family: var(--font-cormorant), Georgia, serif;
   font-size: 1rem;
@@ -69,11 +77,11 @@ input, textarea, select {
 }
 
 input:focus, textarea:focus, select:focus {
-  border-color: var(--gold);
+  border-color: var(--accent-bronze);
 }
 
 select option {
-  background: var(--surface);
+  background: var(--bg-surface);
 }
 
 .grain-overlay {
@@ -89,40 +97,44 @@ select option {
 
 .btn-gold {
   display: inline-block;
-  background: var(--accent);
-  color: #f7f5f1;
+  background: linear-gradient(180deg, #8c6d3f 0%, #7d6138 100%);
+  color: #f2ede6;
   font-family: var(--font-bebas), sans-serif;
-  font-size: 1rem;
-  letter-spacing: 0.1em;
-  padding: 0.85rem 2rem;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 14px 32px;
   border: none;
-  transition: opacity 0.2s, transform 0.2s;
+  border-radius: 6px;
+  transition: background 0.2s, transform 0.15s;
   cursor: pointer;
   text-align: center;
 }
 
 .btn-gold:hover {
-  opacity: 0.88;
+  background: var(--accent-bronze-hover);
   transform: translateY(-1px);
 }
 
 .btn-outline {
   display: inline-block;
   background: transparent;
-  color: var(--gold);
+  color: var(--accent-bronze);
   font-family: var(--font-bebas), sans-serif;
-  font-size: 1rem;
-  letter-spacing: 0.1em;
-  padding: 0.85rem 2rem;
-  border: 1px solid var(--gold);
-  transition: border-color 0.2s, color 0.2s, transform 0.2s;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border: 1px solid var(--accent-bronze);
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
   cursor: pointer;
   text-align: center;
 }
 
 .btn-outline:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  background: var(--accent-bronze);
+  color: #f2ede6;
   transform: translateY(-1px);
 }
 
@@ -130,7 +142,7 @@ select option {
   display: block;
   width: 48px;
   height: 2px;
-  background: var(--gold);
+  background: var(--accent-bronze);
   margin-bottom: 1.5rem;
 }
 
@@ -139,6 +151,6 @@ select option {
   font-size: 0.8rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--accent-bronze);
   margin-bottom: 0.75rem;
 }

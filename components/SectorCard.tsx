@@ -21,7 +21,7 @@ export default function SectorCard({ title, href, index = 0 }: SectorCardProps) 
         href={href}
         style={{
           display: 'block',
-          background: 'var(--surface)',
+          background: 'var(--bg-surface)',
           border: '1px solid var(--border)',
           padding: '2.5rem 2rem',
           position: 'relative',
@@ -50,7 +50,7 @@ export default function SectorCard({ title, href, index = 0 }: SectorCardProps) 
             left: 0,
             height: '2px',
             width: '0',
-            background: 'var(--gold)',
+            background: 'var(--accent-bronze)',
             transition: 'width 0.3s ease',
           }}
         />
@@ -67,7 +67,7 @@ export default function SectorCard({ title, href, index = 0 }: SectorCardProps) 
         <p style={{
           fontFamily: 'var(--font-cormorant)',
           fontSize: '0.9rem',
-          color: 'var(--gold)',
+          color: 'var(--accent-bronze)',
           margin: 0,
           letterSpacing: '0.05em',
         }}>

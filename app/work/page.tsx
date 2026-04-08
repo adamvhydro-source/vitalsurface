@@ -25,10 +25,10 @@ export default function WorkPage() {
   return (
     <>
       {/* Hero */}
-      <section style={{ padding: '10rem 2rem 5rem', background: 'var(--bg)', borderBottom: '1px solid var(--border)' }}>
+      <section style={{ padding: '10rem 2rem 5rem', background: 'var(--bg-primary)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
           <p className="section-label">Portfolio</p>
-          <span style={{ display: 'block', width: '48px', height: '2px', background: 'var(--gold)', marginBottom: '1.5rem' }} />
+          <span style={{ display: 'block', width: '48px', height: '2px', background: 'var(--accent-bronze)', marginBottom: '1.5rem' }} />
           <h1 style={{
             fontFamily: 'var(--font-bebas)',
             fontSize: 'clamp(3rem, 8vw, 7rem)',
@@ -43,7 +43,7 @@ export default function WorkPage() {
       </section>
 
       {/* Filter bar */}
-      <section style={{ padding: '3rem 2rem', background: 'var(--surface)', borderBottom: '1px solid var(--border)', position: 'sticky', top: '72px', zIndex: 100 }}>
+      <section style={{ padding: '3rem 2rem', background: 'var(--bg-surface)', borderBottom: '1px solid var(--border)', position: 'sticky', top: '72px', zIndex: 100 }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
           <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
             {categories.map((cat) => (
@@ -51,9 +51,9 @@ export default function WorkPage() {
                 key={cat}
                 onClick={() => setActiveFilter(cat)}
                 style={{
-                  background: activeFilter === cat ? 'var(--accent)' : 'transparent',
-                  border: `1px solid ${activeFilter === cat ? 'var(--accent)' : 'var(--border)'}`,
-                  color: activeFilter === cat ? '#f7f5f1' : 'var(--text-muted)',
+                  background: activeFilter === cat ? 'var(--accent-olive)' : 'transparent',
+                  border: `1px solid ${activeFilter === cat ? 'var(--accent-olive)' : 'var(--border)'}`,
+                  color: activeFilter === cat ? '#f2ede6' : 'var(--text-secondary)',
                   fontFamily: 'var(--font-bebas)',
                   fontSize: '0.85rem',
                   letterSpacing: '0.1em',
@@ -63,14 +63,14 @@ export default function WorkPage() {
                 }}
                 onMouseEnter={e => {
                   if (activeFilter !== cat) {
-                    (e.target as HTMLElement).style.borderColor = 'var(--gold)'
+                    (e.target as HTMLElement).style.borderColor = 'var(--accent-bronze)'
                     ;(e.target as HTMLElement).style.color = 'var(--text-primary)'
                   }
                 }}
                 onMouseLeave={e => {
                   if (activeFilter !== cat) {
                     (e.target as HTMLElement).style.borderColor = 'var(--border)'
-                    ;(e.target as HTMLElement).style.color = 'var(--text-muted)'
+                    ;(e.target as HTMLElement).style.color = 'var(--text-secondary)'
                   }
                 }}
               >
@@ -82,7 +82,7 @@ export default function WorkPage() {
       </section>
 
       {/* Gallery grid */}
-      <section style={{ padding: '4rem 2rem 8rem', background: 'var(--bg)' }}>
+      <section style={{ padding: '4rem 2rem 8rem', background: 'var(--bg-primary)' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
           <div style={{
             columns: '3 280px',
@@ -100,18 +100,18 @@ export default function WorkPage() {
                   style={{
                     breakInside: 'avoid',
                     marginBottom: '1.25rem',
-                    background: 'var(--surface)',
+                    background: 'var(--bg-surface)',
                     border: '1px solid var(--border)',
                     overflow: 'hidden',
                     cursor: 'pointer',
                     transition: 'border-color 0.2s',
                   }}
-                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = 'var(--gold)'}
+                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = 'var(--accent-bronze)'}
                   onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = 'var(--border)'}
                 >
                   {/* Placeholder image */}
                   <div style={{
-                    background: '#e0dbd3',
+                    background: '#2a2724',
                     height: `${180 + (item.id % 3) * 80}px`,
                     display: 'flex',
                     alignItems: 'center',
@@ -123,7 +123,7 @@ export default function WorkPage() {
                       fontFamily: 'var(--font-bebas)',
                       fontSize: '0.9rem',
                       letterSpacing: '0.15em',
-                      color: '#9a948c',
+                      color: 'var(--text-muted)',
                     }}>
                       {item.title}
                     </span>
@@ -142,7 +142,7 @@ export default function WorkPage() {
                       <span style={{
                         fontFamily: 'var(--font-cormorant)',
                         fontSize: '0.85rem',
-                        color: 'var(--gold)',
+                        color: 'var(--accent-bronze)',
                         letterSpacing: '0.05em',
                       }}>
                         {item.category}
@@ -150,7 +150,7 @@ export default function WorkPage() {
                       <span style={{
                         fontFamily: 'var(--font-cormorant)',
                         fontSize: '0.85rem',
-                        color: 'var(--text-muted)',
+                        color: 'var(--text-secondary)',
                       }}>
                         {item.location}
                       </span>

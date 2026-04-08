@@ -101,12 +101,14 @@ export default function HomePage() {
           >
             <Link href="/contact" style={{
               display: 'inline-block',
-              background: '#2d4a3e',
-              color: '#ffffff',
+              background: 'linear-gradient(180deg, #8c6d3f 0%, #7d6138 100%)',
+              color: '#f2ede6',
               fontFamily: 'var(--font-bebas)',
-              fontSize: '1rem',
-              letterSpacing: '0.1em',
-              padding: '0.85rem 2rem',
+              fontSize: '11px',
+              letterSpacing: '0.15em',
+              textTransform: 'uppercase' as const,
+              padding: '14px 32px',
+              borderRadius: '6px',
             }}>
               Get a Quote
             </Link>
@@ -116,7 +118,7 @@ export default function HomePage() {
 
       {/* Services strip */}
       <section style={{
-        background: 'var(--surface)',
+        background: 'var(--bg-secondary)',
         borderTop: '1px solid var(--border)',
         borderBottom: '1px solid var(--border)',
         padding: '5rem 2rem',
@@ -145,7 +147,7 @@ export default function HomePage() {
       </section>
 
       {/* Intro section */}
-      <section style={{ padding: '7rem 2rem', background: 'var(--bg)' }}>
+      <section style={{ padding: '7rem 2rem', background: 'var(--bg-primary)' }}>
         <div style={{
           maxWidth: '1280px',
           margin: '0 auto',
@@ -181,7 +183,7 @@ export default function HomePage() {
             <p style={{
               fontFamily: 'var(--font-cormorant)',
               fontSize: '1.2rem',
-              color: 'var(--text-muted)',
+              color: 'var(--text-secondary)',
               lineHeight: 1.8,
               marginBottom: '1.5rem',
             }}>
@@ -190,7 +192,7 @@ export default function HomePage() {
             <p style={{
               fontFamily: 'var(--font-cormorant)',
               fontSize: '1.2rem',
-              color: 'var(--text-muted)',
+              color: 'var(--text-secondary)',
               lineHeight: 1.8,
               marginBottom: '2rem',
             }}>
@@ -206,7 +208,7 @@ export default function HomePage() {
       {/* Sectors section */}
       <section style={{
         padding: '7rem 2rem',
-        background: 'var(--surface)',
+        background: 'var(--bg-secondary)',
         borderTop: '1px solid var(--border)',
       }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
@@ -233,7 +235,7 @@ export default function HomePage() {
       </section>
 
       {/* Why Vital section */}
-      <section style={{ padding: '7rem 2rem', background: 'var(--bg)' }}>
+      <section style={{ padding: '7rem 2rem', background: 'var(--bg-primary)' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
           <p className="section-label">Why Vital Surface</p>
           <h2 style={{
@@ -258,7 +260,7 @@ export default function HomePage() {
                 viewport={{ once: true, margin: '-40px' }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
                 style={{
-                  borderLeft: '2px solid var(--gold)',
+                  borderLeft: '2px solid var(--accent-bronze)',
                   paddingLeft: '1.5rem',
                 }}
               >
@@ -274,7 +276,7 @@ export default function HomePage() {
                 <p style={{
                   fontFamily: 'var(--font-cormorant)',
                   fontSize: '1.05rem',
-                  color: 'var(--text-muted)',
+                  color: 'var(--text-secondary)',
                   lineHeight: 1.7,
                   margin: 0,
                 }}>

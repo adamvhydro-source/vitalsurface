@@ -55,10 +55,10 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section style={{ padding: '10rem 2rem 5rem', background: 'var(--bg)', borderBottom: '1px solid var(--border)' }}>
+      <section style={{ padding: '10rem 2rem 5rem', background: 'var(--bg-primary)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
           <p className="section-label">Get in Touch</p>
-          <span style={{ display: 'block', width: '48px', height: '2px', background: 'var(--gold)', marginBottom: '1.5rem' }} />
+          <span style={{ display: 'block', width: '48px', height: '2px', background: 'var(--accent-bronze)', marginBottom: '1.5rem' }} />
           <h1 style={{
             fontFamily: 'var(--font-bebas)',
             fontSize: 'clamp(3rem, 8vw, 7rem)',
@@ -73,7 +73,7 @@ export default function ContactPage() {
             fontFamily: 'var(--font-cormorant)',
             fontStyle: 'italic',
             fontSize: '1.2rem',
-            color: 'var(--text-muted)',
+            color: 'var(--text-secondary)',
             maxWidth: '520px',
             lineHeight: 1.6,
           }}>
@@ -83,7 +83,7 @@ export default function ContactPage() {
       </section>
 
       {/* Form section */}
-      <section style={{ padding: '6rem 2rem 8rem', background: 'var(--bg)' }}>
+      <section style={{ padding: '6rem 2rem 8rem', background: 'var(--bg-primary)' }}>
         <div style={{
           maxWidth: '1280px',
           margin: '0 auto',
@@ -99,11 +99,11 @@ export default function ContactPage() {
             style={{ maxWidth: '560px' }}
           >
             {formState === 'success' ? (
-              <div style={{ padding: '3rem', border: '1px solid var(--gold)', background: 'rgba(139,94,60,0.05)' }}>
+              <div style={{ padding: '3rem', border: '1px solid var(--accent-bronze)', background: 'rgba(140,109,63,0.06)' }}>
                 <p style={{
                   fontFamily: 'var(--font-bebas)',
                   fontSize: '1.8rem',
-                  color: 'var(--gold)',
+                  color: 'var(--accent-bronze)',
                   letterSpacing: '0.05em',
                   marginBottom: '0.75rem',
                 }}>
@@ -112,7 +112,7 @@ export default function ContactPage() {
                 <p style={{
                   fontFamily: 'var(--font-cormorant)',
                   fontSize: '1.1rem',
-                  color: 'var(--text-muted)',
+                  color: 'var(--text-secondary)',
                   lineHeight: 1.6,
                 }}>
                   Thanks for getting in touch. We&apos;ll come back to you shortly.
@@ -122,7 +122,7 @@ export default function ContactPage() {
               <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem' }}>
                   <div>
-                    <label style={{ display: 'block', fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.15em', color: 'var(--text-muted)', marginBottom: '0.5rem' }}>
+                    <label style={{ display: 'block', fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.15em', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
                       Name *
                     </label>
                     <input
@@ -135,7 +135,7 @@ export default function ContactPage() {
                     />
                   </div>
                   <div>
-                    <label style={{ display: 'block', fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.15em', color: 'var(--text-muted)', marginBottom: '0.5rem' }}>
+                    <label style={{ display: 'block', fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.15em', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
                       Company
                     </label>
                     <input
@@ -150,7 +150,7 @@ export default function ContactPage() {
 
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem' }}>
                   <div>
-                    <label style={{ display: 'block', fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.15em', color: 'var(--text-muted)', marginBottom: '0.5rem' }}>
+                    <label style={{ display: 'block', fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.15em', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
                       Email *
                     </label>
                     <input
@@ -163,7 +163,7 @@ export default function ContactPage() {
                     />
                   </div>
                   <div>
-                    <label style={{ display: 'block', fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.15em', color: 'var(--text-muted)', marginBottom: '0.5rem' }}>
+                    <label style={{ display: 'block', fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.15em', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
                       Phone
                     </label>
                     <input
@@ -177,7 +177,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.15em', color: 'var(--text-muted)', marginBottom: '0.5rem' }}>
+                  <label style={{ display: 'block', fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.15em', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
                     Project Type
                   </label>
                   <select name="projectType" value={formData.projectType} onChange={handleChange}>
@@ -189,7 +189,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.15em', color: 'var(--text-muted)', marginBottom: '0.5rem' }}>
+                  <label style={{ display: 'block', fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.15em', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
                     Message *
                   </label>
                   <textarea
@@ -243,22 +243,22 @@ export default function ContactPage() {
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <div>
-                <p style={{ fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--gold)', marginBottom: '0.4rem' }}>LOCATION</p>
-                <p style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1.1rem', color: 'var(--text-muted)', lineHeight: 1.6, margin: 0 }}>
+                <p style={{ fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--accent-bronze)', marginBottom: '0.4rem' }}>LOCATION</p>
+                <p style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0 }}>
                   Stone, Staffordshire<br />
                   Midlands, UK
                 </p>
               </div>
               <div>
-                <p style={{ fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--gold)', marginBottom: '0.4rem' }}>COVERAGE</p>
-                <p style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1.1rem', color: 'var(--text-muted)', lineHeight: 1.6, margin: 0 }}>
+                <p style={{ fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--accent-bronze)', marginBottom: '0.4rem' }}>COVERAGE</p>
+                <p style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0 }}>
                   Midlands as standard.<br />
                   Nationally capable.
                 </p>
               </div>
               <div>
-                <p style={{ fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--gold)', marginBottom: '0.4rem' }}>CLIENTS</p>
-                <p style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1.1rem', color: 'var(--text-muted)', lineHeight: 1.6, margin: 0 }}>
+                <p style={{ fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--accent-bronze)', marginBottom: '0.4rem' }}>CLIENTS</p>
+                <p style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0 }}>
                   Trade and direct.<br />
                   Contractors welcome.
                 </p>

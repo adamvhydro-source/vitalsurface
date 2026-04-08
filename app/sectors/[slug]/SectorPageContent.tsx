@@ -8,7 +8,7 @@ export default function SectorPageContent({ sector }: { sector: Sector }) {
   return (
     <>
       {/* Hero */}
-      <section style={{ padding: '10rem 2rem 5rem', background: 'var(--bg)', borderBottom: '1px solid var(--border)' }}>
+      <section style={{ padding: '10rem 2rem 5rem', background: 'var(--bg-primary)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -22,7 +22,7 @@ export default function SectorPageContent({ sector }: { sector: Sector }) {
             initial={{ width: 0 }}
             animate={{ width: '48px' }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            style={{ display: 'block', height: '2px', background: 'var(--gold)', marginBottom: '1.5rem' }}
+            style={{ display: 'block', height: '2px', background: 'var(--accent-bronze)', marginBottom: '1.5rem' }}
           />
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -43,7 +43,7 @@ export default function SectorPageContent({ sector }: { sector: Sector }) {
       </section>
 
       {/* Intro */}
-      <section style={{ padding: '6rem 2rem', background: 'var(--bg)' }}>
+      <section style={{ padding: '6rem 2rem', background: 'var(--bg-primary)' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -64,7 +64,7 @@ export default function SectorPageContent({ sector }: { sector: Sector }) {
       </section>
 
       {/* What We Do */}
-      <section style={{ padding: '5rem 2rem 7rem', background: 'var(--surface)', borderTop: '1px solid var(--border)' }}>
+      <section style={{ padding: '5rem 2rem 7rem', background: 'var(--bg-secondary)', borderTop: '1px solid var(--border)' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -96,7 +96,7 @@ export default function SectorPageContent({ sector }: { sector: Sector }) {
                     gap: '1rem',
                     fontFamily: 'var(--font-cormorant)',
                     fontSize: '1.1rem',
-                    color: 'var(--text-muted)',
+                    color: 'var(--text-secondary)',
                     lineHeight: 1.6,
                   }}
                 >
@@ -104,7 +104,7 @@ export default function SectorPageContent({ sector }: { sector: Sector }) {
                     display: 'block',
                     width: '8px',
                     height: '8px',
-                    background: 'var(--gold)',
+                    background: 'var(--accent-bronze)',
                     marginTop: '0.45em',
                     flexShrink: 0,
                   }} />

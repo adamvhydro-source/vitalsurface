@@ -13,7 +13,7 @@ export default function PageHero({ title, subtitle, label }: PageHeroProps) {
     <section style={{
       paddingTop: '10rem',
       paddingBottom: '5rem',
-      background: 'var(--bg)',
+      background: 'var(--bg-primary)',
       borderBottom: '1px solid var(--border)',
       position: 'relative',
       overflow: 'hidden',
@@ -36,7 +36,7 @@ export default function PageHero({ title, subtitle, label }: PageHeroProps) {
           style={{
             display: 'block',
             height: '2px',
-            background: 'var(--gold)',
+            background: 'var(--accent-bronze)',
             marginBottom: '1.5rem',
           }}
         />
@@ -64,7 +64,7 @@ export default function PageHero({ title, subtitle, label }: PageHeroProps) {
               fontFamily: 'var(--font-cormorant)',
               fontStyle: 'italic',
               fontSize: '1.3rem',
-              color: 'var(--text-muted)',
+              color: 'var(--text-secondary)',
               marginTop: '1.25rem',
               maxWidth: '600px',
               lineHeight: 1.6,

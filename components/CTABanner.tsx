@@ -18,7 +18,7 @@ export default function CTABanner({
 }: CTABannerProps) {
   return (
     <section style={{
-      background: 'var(--surface)',
+      background: 'var(--bg-secondary)',
       borderTop: '1px solid var(--border)',
       borderBottom: '1px solid var(--border)',
       padding: '6rem 2rem',
@@ -44,7 +44,7 @@ export default function CTABanner({
           fontFamily: 'var(--font-cormorant)',
           fontStyle: 'italic',
           fontSize: '1.2rem',
-          color: 'var(--text-muted)',
+          color: 'var(--text-secondary)',
           marginBottom: '2.5rem',
           lineHeight: 1.6,
         }}>

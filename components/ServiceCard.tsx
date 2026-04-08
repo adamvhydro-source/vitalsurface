@@ -30,7 +30,7 @@ export default function ServiceCard({ title, href, index = 0 }: ServiceCardProps
         href={href}
         style={{
           display: 'block',
-          background: 'var(--surface)',
+          background: 'var(--bg-surface)',
           border: '1px solid var(--border)',
           padding: '2rem 1.5rem',
           transition: 'border-color 0.2s, transform 0.2s',
@@ -39,7 +39,7 @@ export default function ServiceCard({ title, href, index = 0 }: ServiceCardProps
         }}
         onMouseEnter={e => {
           const el = e.currentTarget as HTMLElement
-          el.style.borderColor = 'var(--gold)'
+          el.style.borderColor = 'var(--accent-bronze)'
           el.style.transform = 'translateY(-3px)'
         }}
         onMouseLeave={e => {
@@ -52,7 +52,7 @@ export default function ServiceCard({ title, href, index = 0 }: ServiceCardProps
           display: 'block',
           width: '32px',
           height: '2px',
-          background: 'var(--gold)',
+          background: 'var(--accent-bronze)',
           marginBottom: '1.25rem',
         }} />
         <p style={{
@@ -68,7 +68,7 @@ export default function ServiceCard({ title, href, index = 0 }: ServiceCardProps
         <p style={{
           fontFamily: 'var(--font-cormorant)',
           fontSize: '0.9rem',
-          color: 'var(--gold)',
+          color: 'var(--accent-bronze)',
           margin: '0.75rem 0 0',
           letterSpacing: '0.05em',
         }}>
