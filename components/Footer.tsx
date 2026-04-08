@@ -22,8 +22,8 @@ const sectorLinks = [
 
 export default function Footer() {
   return (
-    <footer style={{
-      background: 'var(--bg-surface)',
+    <footer className="footer" style={{
+      background: '#0f0e0c',
       borderTop: '1px solid var(--accent-bronze)',
       paddingTop: '4rem',
       paddingBottom: '2rem',

@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --bg-primary: #0f0e0c;
-  --bg-secondary: #1a1815;
-  --bg-surface: #242220;
-  --text-primary: #f2ede6;
-  --text-secondary: #a09890;
-  --text-muted: #6b6560;
+  --bg-primary: #f7f5f1;
+  --bg-secondary: #f0ece4;
+  --bg-surface: #ffffff;
+  --text-primary: #1c1a17;
+  --text-secondary: #5a5550;
+  --text-muted: #9a9590;
   --accent-bronze: #8c6d3f;
   --accent-bronze-hover: #7a5e34;
   --accent-olive: #3d4a2e;
   --accent-olive-hover: #2f3a22;
-  --border: rgba(242,237,230,0.08);
-  --border-strong: rgba(242,237,230,0.15);
+  --border: rgba(28,26,23,0.1);
+  --border-strong: rgba(28,26,23,0.2);
   --font-display: var(--font-bebas);
   --font-body: var(--font-cormorant);
 }
@@ -82,6 +82,25 @@ input:focus, textarea:focus, select:focus {
 
 select option {
   background: var(--bg-surface);
+}
+
+/* Dark section overrides — local variable scope for hero and footer */
+.hero {
+  background: #0f0e0c;
+  --text-primary: #f2ede6;
+  --text-secondary: #a09890;
+  --text-muted: #6b6560;
+  --border: rgba(242,237,230,0.08);
+  --border-strong: rgba(242,237,230,0.15);
+}
+
+.footer {
+  background: #0f0e0c;
+  --text-primary: #f2ede6;
+  --text-secondary: #a09890;
+  --text-muted: #6b6560;
+  --border: rgba(242,237,230,0.08);
+  --border-strong: rgba(242,237,230,0.15);
 }
 
 .grain-overlay {

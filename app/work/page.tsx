@@ -111,7 +111,7 @@ export default function WorkPage() {
                 >
                   {/* Placeholder image */}
                   <div style={{
-                    background: '#2a2724',
+                    background: '#e5e0d8',
                     height: `${180 + (item.id % 3) * 80}px`,
                     display: 'flex',
                     alignItems: 'center',
