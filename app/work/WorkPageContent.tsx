@@ -1,26 +1,22 @@
 'use client'
 
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import galleryData from '@/data/gallery.json'
+// Replace placeholder images with real client photos — see Ryan for photography assets.
 
-const categories = ['All', 'Spray Painting', 'Vinyl Wrapping', 'Shop Fronts', 'Washrooms', 'Hospitality', 'Retail']
+import { motion } from 'framer-motion'
+import galleryData from '@/data/gallery.json'
 
 type GalleryItem = {
   id: number
   title: string
-  category: string
-  image: string
-  location: string
+  tag: string
 }
 
+const items = galleryData as GalleryItem[]
+
+// Varied heights give the masonry layout its rhythm. Real photos will use their natural aspect ratio.
+const placeholderHeights = [520, 380, 460, 600, 420, 500, 380, 560, 440, 520, 400, 580]
+
 export default function WorkPageContent() {
-  const [activeFilter, setActiveFilter] = useState('All')
-
-  const filtered = activeFilter === 'All'
-    ? (galleryData as GalleryItem[])
-    : (galleryData as GalleryItem[]).filter((item) => item.category === activeFilter)
-
   return (
     <>
       {/* Hero */}
@@ -41,123 +37,67 @@ export default function WorkPageContent() {
         </div>
       </section>
 
-      {/* Filter bar */}
-      <section style={{ padding: '3rem 2rem', background: 'var(--bg-surface)', borderBottom: '1px solid var(--border)', position: 'sticky', top: '72px', zIndex: 100 }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
-          <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveFilter(cat)}
-                style={{
-                  background: activeFilter === cat ? 'var(--accent-olive)' : 'transparent',
-                  border: `1px solid ${activeFilter === cat ? 'var(--accent-olive)' : 'var(--border)'}`,
-                  color: activeFilter === cat ? '#f2ede6' : 'var(--text-secondary)',
-                  fontFamily: 'var(--font-bebas)',
-                  fontSize: '0.85rem',
-                  letterSpacing: '0.1em',
-                  padding: '0.5rem 1.25rem',
-                  cursor: 'pointer',
-                  transition: 'all 0.2s',
-                }}
-                onMouseEnter={e => {
-                  if (activeFilter !== cat) {
-                    (e.target as HTMLElement).style.borderColor = 'var(--accent-bronze)'
-                    ;(e.target as HTMLElement).style.color = 'var(--text-primary)'
-                  }
-                }}
-                onMouseLeave={e => {
-                  if (activeFilter !== cat) {
-                    (e.target as HTMLElement).style.borderColor = 'var(--border)'
-                    ;(e.target as HTMLElement).style.color = 'var(--text-secondary)'
-                  }
-                }}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery grid */}
-      <section style={{ padding: '4rem 2rem 8rem', background: 'var(--bg-primary)' }}>
+      {/* Gallery — masonry */}
+      <section style={{ padding: '5rem 2rem 8rem', background: 'var(--bg-primary)' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
           <div style={{
-            columns: '3 280px',
-            gap: '1.25rem',
+            columns: '3 320px',
+            columnGap: '1.5rem',
           }}>
-            <AnimatePresence mode="popLayout">
-              {filtered.map((item) => (
-                <motion.div
+            {items.map((item, i) => {
+              const h = placeholderHeights[i % placeholderHeights.length]
+              return (
+                <motion.figure
                   key={item.id}
-                  layout
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.3 }}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-40px' }}
+                  transition={{ duration: 0.4 }}
                   style={{
                     breakInside: 'avoid',
-                    marginBottom: '1.25rem',
-                    background: 'var(--bg-surface)',
-                    border: '1px solid var(--border)',
-                    overflow: 'hidden',
-                    cursor: 'pointer',
-                    transition: 'border-color 0.2s',
+                    margin: '0 0 1.5rem',
+                    display: 'block',
                   }}
-                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = 'var(--accent-bronze)'}
-                  onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = 'var(--border)'}
                 >
-                  {/* Placeholder image */}
-                  <div style={{
-                    background: '#e5e0d8',
-                    height: `${180 + (item.id % 3) * 80}px`,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    position: 'relative',
-                    overflow: 'hidden',
-                  }}>
-                    <span style={{
-                      fontFamily: 'var(--font-bebas)',
-                      fontSize: '0.9rem',
-                      letterSpacing: '0.15em',
-                      color: 'var(--text-muted)',
-                    }}>
-                      {item.title}
-                    </span>
-                  </div>
-                  <div style={{ padding: '1.25rem' }}>
-                    <p style={{
-                      fontFamily: 'var(--font-bebas)',
-                      fontSize: '1.1rem',
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`https://picsum.photos/seed/vital-${item.id}/800/${h}`}
+                    alt={item.title}
+                    width={800}
+                    height={h}
+                    loading="lazy"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      display: 'block',
+                      background: '#e5e0d8',
+                    }}
+                  />
+                  <figcaption style={{ paddingTop: '1rem' }}>
+                    <h3 style={{
+                      fontFamily: 'var(--font-bebas), sans-serif',
+                      fontSize: '1.4rem',
                       letterSpacing: '0.04em',
+                      lineHeight: 1.1,
                       color: 'var(--text-primary)',
                       margin: '0 0 0.4rem',
                     }}>
                       {item.title}
-                    </p>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                      <span style={{
-                        fontFamily: 'var(--font-cormorant)',
-                        fontSize: '0.85rem',
-                        color: 'var(--accent-bronze)',
-                        letterSpacing: '0.05em',
-                      }}>
-                        {item.category}
-                      </span>
-                      <span style={{
-                        fontFamily: 'var(--font-cormorant)',
-                        fontSize: '0.85rem',
-                        color: 'var(--text-secondary)',
-                      }}>
-                        {item.location}
-                      </span>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </AnimatePresence>
+                    </h3>
+                    <span style={{
+                      fontFamily: 'var(--font-barlow), sans-serif',
+                      fontWeight: 400,
+                      fontSize: '11px',
+                      letterSpacing: '0.18em',
+                      textTransform: 'uppercase',
+                      color: 'var(--accent-bronze)',
+                    }}>
+                      {item.tag}
+                    </span>
+                  </figcaption>
+                </motion.figure>
+              )
+            })}
           </div>
         </div>
       </section>

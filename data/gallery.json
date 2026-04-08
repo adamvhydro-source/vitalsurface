@@ -1,14 +1,14 @@
 [
-  { "id": 1, "title": "Bar Front Transformation", "category": "Vinyl Wrapping", "image": "/images/gallery/placeholder.jpg", "location": "Birmingham" },
-  { "id": 2, "title": "Retail Unit Spray Finish", "category": "Spray Painting", "image": "/images/gallery/placeholder.jpg", "location": "Staffordshire" },
-  { "id": 3, "title": "Shop Front Refurbishment", "category": "Shop Fronts", "image": "/images/gallery/placeholder.jpg", "location": "Wolverhampton" },
-  { "id": 4, "title": "Washroom Panel Refinish", "category": "Washrooms", "image": "/images/gallery/placeholder.jpg", "location": "Derby" },
-  { "id": 5, "title": "Pub Interior Recolour", "category": "Hospitality", "image": "/images/gallery/placeholder.jpg", "location": "Lichfield" },
-  { "id": 6, "title": "Office Reception Branding", "category": "Vinyl Wrapping", "image": "/images/gallery/placeholder.jpg", "location": "Coventry" },
-  { "id": 7, "title": "Retail Gondola Finish", "category": "Retail", "image": "/images/gallery/placeholder.jpg", "location": "Birmingham" },
-  { "id": 8, "title": "On-Site Spray — Joinery", "category": "Spray Painting", "image": "/images/gallery/placeholder.jpg", "location": "Stone" },
-  { "id": 9, "title": "Shopfront Solar Film", "category": "Vinyl Wrapping", "image": "/images/gallery/placeholder.jpg", "location": "Tamworth" },
-  { "id": 10, "title": "Hospitality Booth Wrap", "category": "Hospitality", "image": "/images/gallery/placeholder.jpg", "location": "Stafford" },
-  { "id": 11, "title": "Display Unit Spray", "category": "Retail", "image": "/images/gallery/placeholder.jpg", "location": "Walsall" },
-  { "id": 12, "title": "Feature Wall — Office Fit-Out", "category": "Spray Painting", "image": "/images/gallery/placeholder.jpg", "location": "Birmingham" }
+  { "id": 1, "title": "Bar Front Transformation", "tag": "Vinyl" },
+  { "id": 2, "title": "Retail Unit Spray Finish", "tag": "Spray" },
+  { "id": 3, "title": "Shop Front Refurbishment", "tag": "Shopfront" },
+  { "id": 4, "title": "Washroom Panel Refinish", "tag": "Washroom" },
+  { "id": 5, "title": "Pub Interior Recolour", "tag": "Hospitality" },
+  { "id": 6, "title": "Office Reception Branding", "tag": "Vinyl" },
+  { "id": 7, "title": "Retail Gondola Finish", "tag": "Retail" },
+  { "id": 8, "title": "On-Site Spray — Joinery", "tag": "Spray" },
+  { "id": 9, "title": "Shopfront Solar Film", "tag": "Tinting" },
+  { "id": 10, "title": "Hospitality Booth Wrap", "tag": "Hospitality" },
+  { "id": 11, "title": "Display Unit Spray", "tag": "Retail" },
+  { "id": 12, "title": "Feature Wall — Office Fit-Out", "tag": "Spray" }
 ]
