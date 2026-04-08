@@ -3,18 +3,45 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import ServiceCard from '@/components/ServiceCard'
 import SectorCard from '@/components/SectorCard'
 import CTABanner from '@/components/CTABanner'
 
 const services = [
-  { title: 'On-Site Spray Painting', href: '/services/spray-painting-on-site' },
-  { title: 'In-Unit Spray Painting', href: '/services/spray-painting-in-unit' },
-  { title: 'Vinyl Wrapping', href: '/services/vinyl-wrapping' },
-  { title: 'Window Tinting', href: '/services/window-tinting' },
-  { title: 'POS Installation', href: '/services/pos-installation' },
-  { title: 'Signage', href: '/services/signage' },
-  { title: '3D Printing', href: '/services/3d-printing' },
+  {
+    title: 'On-Site Spray Painting',
+    descriptor: 'When the work can\u2019t come to us, we come to the work.',
+    href: '/services/spray-painting-on-site',
+  },
+  {
+    title: 'In-Unit Spray Painting',
+    descriptor: 'Professional spray finishing in our Staffordshire studio.',
+    href: '/services/spray-painting-in-unit',
+  },
+  {
+    title: 'Vinyl Wrapping',
+    descriptor: 'Cost-effective surface transformation, no respray required.',
+    href: '/services/vinyl-wrapping',
+  },
+  {
+    title: 'Window Tinting',
+    descriptor: 'Solar control, privacy, and decorative film for commercial spaces.',
+    href: '/services/window-tinting',
+  },
+  {
+    title: 'POS Installation',
+    descriptor: 'Retail environments installed exactly as designed.',
+    href: '/services/pos-installation',
+  },
+  {
+    title: 'Signage',
+    descriptor: 'Fascia, wayfinding, and illuminated signage, managed end to end.',
+    href: '/services/signage',
+  },
+  {
+    title: '3D Printing',
+    descriptor: 'Bespoke printed components, professionally spray finished.',
+    href: '/services/3d-printing',
+  },
 ]
 
 const sectors = [
@@ -116,34 +143,94 @@ export default function HomePageContent() {
         </div>
       </section>
 
-      {/* Services strip */}
+      {/* Services — editorial layout */}
       <section style={{
-        background: 'var(--bg-secondary)',
-        borderTop: '1px solid var(--border)',
-        borderBottom: '1px solid var(--border)',
-        padding: '5rem 2rem',
+        background: '#f7f5f1',
+        padding: '7rem 2rem',
       }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+        <div style={{ maxWidth: '1180px', margin: '0 auto' }}>
           <p className="section-label">What We Do</p>
           <h2 style={{
             fontFamily: 'var(--font-bebas)',
             fontSize: 'clamp(2rem, 4vw, 3rem)',
             color: 'var(--text-primary)',
-            marginBottom: '3rem',
+            marginBottom: '4.5rem',
             letterSpacing: '0.05em',
           }}>
             Our Services
           </h2>
-          <div style={{
+          <ul className="services-list" style={{
+            listStyle: 'none',
+            margin: 0,
+            padding: 0,
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-            gap: '1.25rem',
+            gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+            columnGap: '5rem',
+            rowGap: '3.5rem',
           }}>
             {services.map((service, i) => (
-              <ServiceCard key={service.href} title={service.title} href={service.href} index={i} />
+              <motion.li
+                key={service.href}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.4, delay: (i % 2) * 0.05 }}
+              >
+                <Link href={service.href} className="service-item" style={{
+                  display: 'block',
+                  textDecoration: 'none',
+                  color: 'inherit',
+                }}>
+                  <span className="service-rule" />
+                  <h3 style={{
+                    fontFamily: 'var(--font-bebas), sans-serif',
+                    fontSize: '2rem',
+                    lineHeight: 1,
+                    letterSpacing: '0.04em',
+                    color: 'var(--text-primary)',
+                    margin: '0 0 0.6rem',
+                  }}>
+                    {service.title}
+                  </h3>
+                  <p style={{
+                    fontFamily: 'var(--font-barlow), sans-serif',
+                    fontWeight: 300,
+                    fontSize: '0.95rem',
+                    lineHeight: 1.55,
+                    letterSpacing: '0.01em',
+                    color: 'var(--text-secondary)',
+                    margin: 0,
+                  }}>
+                    {service.descriptor}
+                  </p>
+                </Link>
+              </motion.li>
             ))}
-          </div>
+          </ul>
         </div>
+        <style>{`
+          .service-rule {
+            display: block;
+            width: 32px;
+            height: 1px;
+            background: #8c6d3f;
+            margin-bottom: 1.25rem;
+            transition: width 0.25s ease;
+          }
+          .service-item:hover .service-rule {
+            width: 64px;
+          }
+          .service-item:hover h3 {
+            color: #8c6d3f;
+            transition: color 0.2s ease;
+          }
+          @media (max-width: 768px) {
+            .services-list {
+              grid-template-columns: 1fr !important;
+              row-gap: 2.75rem !important;
+            }
+          }
+        `}</style>
       </section>
 
       {/* Rllout — intelligent job management */}
