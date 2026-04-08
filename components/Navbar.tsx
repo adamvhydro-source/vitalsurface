@@ -113,9 +113,11 @@ export default function Navbar() {
                   background: 'none',
                   border: 'none',
                   color: navTextColor,
-                  fontFamily: 'var(--font-cormorant)',
-                  fontStyle: 'italic',
-                  fontSize: '1.05rem',
+                  fontFamily: 'var(--font-barlow), sans-serif',
+                  fontWeight: 400,
+                  fontSize: '13px',
+                  letterSpacing: '0.12em',
+                  textTransform: 'uppercase',
                   cursor: 'pointer',
                   display: 'flex',
                   alignItems: 'center',
@@ -155,8 +157,11 @@ export default function Navbar() {
                         style={{
                           display: 'block',
                           padding: '0.65rem 1.25rem',
-                          fontFamily: 'var(--font-cormorant)',
-                          fontSize: '1rem',
+                          fontFamily: 'var(--font-barlow), sans-serif',
+                          fontWeight: 400,
+                          fontSize: '13px',
+                          letterSpacing: '0.12em',
+                          textTransform: 'uppercase',
                           color: 'var(--text-primary)',
                           transition: 'color 0.15s, padding-left 0.15s',
                         }}
@@ -185,9 +190,11 @@ export default function Navbar() {
                   background: 'none',
                   border: 'none',
                   color: navTextColor,
-                  fontFamily: 'var(--font-cormorant)',
-                  fontStyle: 'italic',
-                  fontSize: '1.05rem',
+                  fontFamily: 'var(--font-barlow), sans-serif',
+                  fontWeight: 400,
+                  fontSize: '13px',
+                  letterSpacing: '0.12em',
+                  textTransform: 'uppercase',
                   cursor: 'pointer',
                   display: 'flex',
                   alignItems: 'center',
@@ -227,8 +234,11 @@ export default function Navbar() {
                         style={{
                           display: 'block',
                           padding: '0.65rem 1.25rem',
-                          fontFamily: 'var(--font-cormorant)',
-                          fontSize: '1rem',
+                          fontFamily: 'var(--font-barlow), sans-serif',
+                          fontWeight: 400,
+                          fontSize: '13px',
+                          letterSpacing: '0.12em',
+                          textTransform: 'uppercase',
                           color: 'var(--text-primary)',
                           transition: 'color 0.15s, padding-left 0.15s',
                         }}
@@ -252,9 +262,11 @@ export default function Navbar() {
             <Link
               href="/work"
               style={{
-                fontFamily: 'var(--font-cormorant)',
-                fontStyle: 'italic',
-                fontSize: '1.05rem',
+                fontFamily: 'var(--font-barlow), sans-serif',
+                fontWeight: 400,
+                fontSize: '13px',
+                letterSpacing: '0.12em',
+                textTransform: 'uppercase',
                 color: navTextColor,
                 transition: 'color 0.3s',
               }}
@@ -333,10 +345,13 @@ export default function Navbar() {
                     onClick={() => setMobileOpen(false)}
                     style={{
                       display: 'block',
-                      fontFamily: 'var(--font-cormorant)',
-                      fontSize: '1.5rem',
+                      fontFamily: 'var(--font-barlow), sans-serif',
+                      fontWeight: 400,
+                      fontSize: '14px',
+                      letterSpacing: '0.12em',
+                      textTransform: 'uppercase',
                       color: 'var(--text-primary)',
-                      padding: '0.5rem 0',
+                      padding: '0.85rem 0',
                       borderBottom: '1px solid var(--border)',
                     }}
                   >
@@ -353,10 +368,13 @@ export default function Navbar() {
                     onClick={() => setMobileOpen(false)}
                     style={{
                       display: 'block',
-                      fontFamily: 'var(--font-cormorant)',
-                      fontSize: '1.5rem',
+                      fontFamily: 'var(--font-barlow), sans-serif',
+                      fontWeight: 400,
+                      fontSize: '14px',
+                      letterSpacing: '0.12em',
+                      textTransform: 'uppercase',
                       color: 'var(--text-primary)',
-                      padding: '0.5rem 0',
+                      padding: '0.85rem 0',
                       borderBottom: '1px solid var(--border)',
                     }}
                   >
@@ -368,10 +386,13 @@ export default function Navbar() {
                 href="/work"
                 onClick={() => setMobileOpen(false)}
                 style={{
-                  fontFamily: 'var(--font-cormorant)',
-                  fontSize: '1.5rem',
+                  fontFamily: 'var(--font-barlow), sans-serif',
+                  fontWeight: 400,
+                  fontSize: '14px',
+                  letterSpacing: '0.12em',
+                  textTransform: 'uppercase',
                   color: 'var(--text-primary)',
-                  padding: '0.5rem 0',
+                  padding: '0.85rem 0',
                   borderBottom: '1px solid var(--border)',
                   marginBottom: '2rem',
                   display: 'block',
