@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import ServiceCard from '@/components/ServiceCard'
 import SectorCard from '@/components/SectorCard'
@@ -47,92 +48,69 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section style={{
-        minHeight: 'auto',
-        display: 'flex',
-        alignItems: 'center',
-        background: 'var(--bg)',
-        position: 'relative',
-        overflow: 'hidden',
-        padding: '7rem 2rem 5rem',
-      }}>
+      <section style={{ position: 'relative', height: '100vh', overflow: 'hidden' }}>
+        <Image
+          src="/images/hero.jpg"
+          alt="Vital Surface commercial finishing"
+          fill
+          priority
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+        />
         <div style={{
           position: 'absolute',
           inset: 0,
-          background: 'radial-gradient(ellipse at 70% 50%, rgba(139,94,60,0.05) 0%, transparent 70%)',
-          pointerEvents: 'none',
-        }} />
-
-        <div style={{ maxWidth: '1280px', margin: '0 auto', width: '100%' }}>
-          <div style={{ maxWidth: '780px' }}>
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              className="section-label"
-            >
-              Commercial Surface Finishing — Midlands
-            </motion.p>
-
-            <h1 style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'flex-end',
+          padding: '64px',
+        }}>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            style={{
               fontFamily: 'var(--font-bebas)',
-              fontSize: 'clamp(4rem, 10vw, 9rem)',
+              fontSize: 'clamp(64px, 10vw, 120px)',
               lineHeight: 0.95,
               letterSpacing: '0.02em',
-              margin: '0 0 2.5rem',
-              color: 'var(--text-primary)',
+              color: '#ffffff',
+              margin: '0 0 1rem',
+            }}
+          >
+            MORE THAN<br />SURFACE DEEP.
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            style={{
+              fontFamily: 'var(--font-barlow)',
+              fontWeight: 300,
+              fontSize: '1rem',
+              color: '#ffffff',
+              margin: '0 0 2rem',
+              letterSpacing: '0.02em',
+            }}
+          >
+            Commercial surface finishing. One team, one call.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.35 }}
+          >
+            <Link href="/contact" style={{
+              display: 'inline-block',
+              background: '#2d4a3e',
+              color: '#ffffff',
+              fontFamily: 'var(--font-bebas)',
+              fontSize: '1rem',
+              letterSpacing: '0.1em',
+              padding: '0.85rem 2rem',
             }}>
-              {['MORE THAN ', 'SURFACE DEEP.'].map((word, i) => (
-                <motion.span
-                  key={i}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.1 + i * 0.08 }}
-                  style={{ display: i % 2 === 1 ? 'block' : 'inline' }}
-                >
-                  {word}
-                </motion.span>
-              ))}
-            </h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.65 }}
-              style={{
-                fontFamily: 'var(--font-cormorant)',
-                fontStyle: 'italic',
-                fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)',
-                color: 'var(--text-muted)',
-                marginBottom: '2.5rem',
-                lineHeight: 1.6,
-              }}
-            >
-              Commercial surface finishing across the Midlands.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.8 }}
-              style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}
-            >
-              <Link href="/contact" className="btn-gold">Get a Quote</Link>
-              <Link href="/work" className="btn-outline">See Our Work</Link>
-            </motion.div>
-          </div>
-        </div>
-
-        {/* Spline placeholder */}
-        <div style={{
-          position: 'absolute',
-          right: 0,
-          top: 0,
-          bottom: 0,
-          width: '45%',
-          pointerEvents: 'none',
-        }}>
-          {/* Spline hero — add @splinetool/react-spline component here */}
+              Get a Quote
+            </Link>
+          </motion.div>
         </div>
       </section>
 
