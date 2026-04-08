@@ -66,7 +66,7 @@ export default function Navbar() {
   return (
     <>
       <motion.nav
-        animate={{ backgroundColor: scrolled ? '#1a1a1a' : 'rgba(26,26,26,0)' }}
+        animate={{ backgroundColor: scrolled ? 'rgba(247,245,241,0.95)' : 'rgba(247,245,241,0)' }}
         transition={{ duration: 0.3 }}
         style={{
           position: 'fixed',
@@ -74,7 +74,7 @@ export default function Navbar() {
           left: 0,
           right: 0,
           zIndex: 1000,
-          borderBottom: scrolled ? '1px solid #2e2e2e' : '1px solid transparent',
+          borderBottom: scrolled ? '1px solid var(--border)' : '1px solid transparent',
         }}
       >
         <div style={{
@@ -134,8 +134,8 @@ export default function Navbar() {
                       position: 'absolute',
                       top: 'calc(100% + 1rem)',
                       left: '-1rem',
-                      background: '#222222',
-                      border: '1px solid #2e2e2e',
+                      background: 'var(--bg)',
+                      border: '1px solid var(--border)',
                       minWidth: '240px',
                       padding: '0.5rem 0',
                     }}
@@ -205,8 +205,8 @@ export default function Navbar() {
                       position: 'absolute',
                       top: 'calc(100% + 1rem)',
                       left: '-1rem',
-                      background: '#222222',
-                      border: '1px solid #2e2e2e',
+                      background: 'var(--bg)',
+                      border: '1px solid var(--border)',
                       minWidth: '240px',
                       padding: '0.5rem 0',
                     }}
@@ -288,7 +288,7 @@ export default function Navbar() {
             style={{
               position: 'fixed',
               inset: 0,
-              background: '#111111',
+              background: 'var(--bg)',
               zIndex: 2000,
               display: 'flex',
               flexDirection: 'column',
@@ -329,7 +329,7 @@ export default function Navbar() {
                       fontSize: '1.5rem',
                       color: 'var(--text-primary)',
                       padding: '0.5rem 0',
-                      borderBottom: '1px solid #2e2e2e',
+                      borderBottom: '1px solid var(--border)',
                     }}
                   >
                     {link.label}
@@ -349,7 +349,7 @@ export default function Navbar() {
                       fontSize: '1.5rem',
                       color: 'var(--text-primary)',
                       padding: '0.5rem 0',
-                      borderBottom: '1px solid #2e2e2e',
+                      borderBottom: '1px solid var(--border)',
                     }}
                   >
                     {link.label}

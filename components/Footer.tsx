@@ -23,7 +23,7 @@ const sectorLinks = [
 export default function Footer() {
   return (
     <footer style={{
-      background: '#111111',
+      background: 'var(--surface)',
       borderTop: '1px solid var(--gold)',
       paddingTop: '4rem',
       paddingBottom: '2rem',
@@ -59,7 +59,7 @@ export default function Footer() {
               lineHeight: 1.6,
               marginBottom: '1.5rem',
             }}>
-              Your Space.<br />Your Brand.<br />Finished Properly.
+              More Than Surface Deep.
             </p>
             <p style={{
               fontFamily: 'var(--font-cormorant)',
@@ -168,7 +168,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div style={{
-          borderTop: '1px solid #2e2e2e',
+          borderTop: '1px solid var(--border)',
           paddingTop: '1.5rem',
           display: 'flex',
           justifyContent: 'space-between',

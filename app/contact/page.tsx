@@ -99,7 +99,7 @@ export default function ContactPage() {
             style={{ maxWidth: '560px' }}
           >
             {formState === 'success' ? (
-              <div style={{ padding: '3rem', border: '1px solid var(--gold)', background: 'rgba(201,168,76,0.05)' }}>
+              <div style={{ padding: '3rem', border: '1px solid var(--gold)', background: 'rgba(139,94,60,0.05)' }}>
                 <p style={{
                   fontFamily: 'var(--font-bebas)',
                   fontSize: '1.8rem',

@@ -64,7 +64,7 @@ export default function SectorPageContent({ sector }: { sector: Sector }) {
       </section>
 
       {/* What We Do */}
-      <section style={{ padding: '5rem 2rem 7rem', background: '#111111', borderTop: '1px solid var(--border)' }}>
+      <section style={{ padding: '5rem 2rem 7rem', background: 'var(--surface)', borderTop: '1px solid var(--border)' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

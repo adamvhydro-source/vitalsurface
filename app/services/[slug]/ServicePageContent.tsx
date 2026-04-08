@@ -73,7 +73,7 @@ export default function ServicePageContent({ service }: { service: Service }) {
       {/* What We Cover */}
       <section style={{
         padding: '5rem 2rem 7rem',
-        background: '#111111',
+        background: 'var(--surface)',
         borderTop: '1px solid var(--border)',
       }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>

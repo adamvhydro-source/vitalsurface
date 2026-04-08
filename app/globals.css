@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #1a1a1a;
-  --surface: #222222;
-  --border: #2e2e2e;
-  --gold: #C9A84C;
-  --text-primary: #f0ede8;
-  --text-muted: #888880;
+  --bg: #f7f5f1;
+  --surface: #ede9e3;
+  --border: #d5cfc7;
+  --gold: #8b5e3c;
+  --accent: #2d4a3e;
+  --text-primary: #1c1a17;
+  --text-muted: #7a7470;
   --font-display: var(--font-bebas);
   --font-body: var(--font-cormorant);
 }
@@ -16,6 +17,7 @@
   --color-surface: var(--surface);
   --color-border: var(--border);
   --color-gold: var(--gold);
+  --color-accent: var(--accent);
   --color-text-primary: var(--text-primary);
   --color-text-muted: var(--text-muted);
 }
@@ -87,8 +89,8 @@ select option {
 
 .btn-gold {
   display: inline-block;
-  background: var(--gold);
-  color: #0a0a0a;
+  background: var(--accent);
+  color: #f7f5f1;
   font-family: var(--font-bebas), sans-serif;
   font-size: 1rem;
   letter-spacing: 0.1em;
@@ -107,20 +109,20 @@ select option {
 .btn-outline {
   display: inline-block;
   background: transparent;
-  color: var(--text-primary);
+  color: var(--gold);
   font-family: var(--font-bebas), sans-serif;
   font-size: 1rem;
   letter-spacing: 0.1em;
   padding: 0.85rem 2rem;
-  border: 1px solid var(--text-primary);
+  border: 1px solid var(--gold);
   transition: border-color 0.2s, color 0.2s, transform 0.2s;
   cursor: pointer;
   text-align: center;
 }
 
 .btn-outline:hover {
-  border-color: var(--gold);
-  color: var(--gold);
+  border-color: var(--accent);
+  color: var(--accent);
   transform: translateY(-1px);
 }
 

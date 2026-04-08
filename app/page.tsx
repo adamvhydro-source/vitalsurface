@@ -48,18 +48,18 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section style={{
-        minHeight: '100vh',
+        minHeight: 'auto',
         display: 'flex',
         alignItems: 'center',
         background: 'var(--bg)',
         position: 'relative',
         overflow: 'hidden',
-        padding: '8rem 2rem 5rem',
+        padding: '7rem 2rem 5rem',
       }}>
         <div style={{
           position: 'absolute',
           inset: 0,
-          background: 'radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.04) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse at 70% 50%, rgba(139,94,60,0.05) 0%, transparent 70%)',
           pointerEvents: 'none',
         }} />
 
@@ -82,7 +82,7 @@ export default function HomePage() {
               margin: '0 0 2.5rem',
               color: 'var(--text-primary)',
             }}>
-              {['YOUR ', 'SPACE.', 'YOUR ', 'BRAND.', 'FINISHED', 'PROPERLY.'].map((word, i) => (
+              {['MORE THAN ', 'SURFACE DEEP.'].map((word, i) => (
                 <motion.span
                   key={i}
                   initial={{ opacity: 0, y: 30 }}
@@ -138,7 +138,7 @@ export default function HomePage() {
 
       {/* Services strip */}
       <section style={{
-        background: '#111111',
+        background: 'var(--surface)',
         borderTop: '1px solid var(--border)',
         borderBottom: '1px solid var(--border)',
         padding: '5rem 2rem',
@@ -228,7 +228,7 @@ export default function HomePage() {
       {/* Sectors section */}
       <section style={{
         padding: '7rem 2rem',
-        background: '#111111',
+        background: 'var(--surface)',
         borderTop: '1px solid var(--border)',
       }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>

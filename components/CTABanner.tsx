@@ -18,7 +18,7 @@ export default function CTABanner({
 }: CTABannerProps) {
   return (
     <section style={{
-      background: '#111111',
+      background: 'var(--surface)',
       borderTop: '1px solid var(--border)',
       borderBottom: '1px solid var(--border)',
       padding: '6rem 2rem',

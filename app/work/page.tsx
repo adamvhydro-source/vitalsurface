@@ -43,7 +43,7 @@ export default function WorkPage() {
       </section>
 
       {/* Filter bar */}
-      <section style={{ padding: '3rem 2rem', background: '#111111', borderBottom: '1px solid var(--border)', position: 'sticky', top: '72px', zIndex: 100 }}>
+      <section style={{ padding: '3rem 2rem', background: 'var(--surface)', borderBottom: '1px solid var(--border)', position: 'sticky', top: '72px', zIndex: 100 }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
           <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
             {categories.map((cat) => (
@@ -51,9 +51,9 @@ export default function WorkPage() {
                 key={cat}
                 onClick={() => setActiveFilter(cat)}
                 style={{
-                  background: activeFilter === cat ? 'var(--gold)' : 'transparent',
-                  border: `1px solid ${activeFilter === cat ? 'var(--gold)' : 'var(--border)'}`,
-                  color: activeFilter === cat ? '#0a0a0a' : 'var(--text-muted)',
+                  background: activeFilter === cat ? 'var(--accent)' : 'transparent',
+                  border: `1px solid ${activeFilter === cat ? 'var(--accent)' : 'var(--border)'}`,
+                  color: activeFilter === cat ? '#f7f5f1' : 'var(--text-muted)',
                   fontFamily: 'var(--font-bebas)',
                   fontSize: '0.85rem',
                   letterSpacing: '0.1em',
@@ -111,7 +111,7 @@ export default function WorkPage() {
                 >
                   {/* Placeholder image */}
                   <div style={{
-                    background: '#2a2a2a',
+                    background: '#e0dbd3',
                     height: `${180 + (item.id % 3) * 80}px`,
                     display: 'flex',
                     alignItems: 'center',
@@ -123,7 +123,7 @@ export default function WorkPage() {
                       fontFamily: 'var(--font-bebas)',
                       fontSize: '0.9rem',
                       letterSpacing: '0.15em',
-                      color: '#444440',
+                      color: '#9a948c',
                     }}>
                       {item.title}
                     </span>
