@@ -70,6 +70,7 @@ export default function Navbar() {
   return (
     <>
       <motion.nav
+        initial={{ backgroundColor: 'rgba(247,245,241,0)' }}
         animate={{ backgroundColor: scrolled ? 'rgba(247,245,241,0.95)' : 'rgba(247,245,241,0)' }}
         transition={{ duration: 0.3 }}
         style={{
