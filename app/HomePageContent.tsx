@@ -146,6 +146,82 @@ export default function HomePageContent() {
         </div>
       </section>
 
+      {/* Rllout — intelligent job management */}
+      <section style={{
+        background: '#0f0e0c',
+        padding: '6rem 2rem',
+        borderTop: '1px solid rgba(242,237,230,0.08)',
+        borderBottom: '1px solid rgba(242,237,230,0.08)',
+      }}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.5 }}
+          style={{
+            maxWidth: '720px',
+            margin: '0 auto',
+            textAlign: 'center',
+          }}
+        >
+          <p style={{
+            fontFamily: 'var(--font-cormorant), Georgia, serif',
+            fontSize: '0.8rem',
+            letterSpacing: '0.25em',
+            textTransform: 'uppercase',
+            color: 'var(--accent-bronze)',
+            marginBottom: '1rem',
+          }}>
+            How We Run Every Job
+          </p>
+          <h2 style={{
+            fontFamily: 'var(--font-bebas), sans-serif',
+            fontSize: 'clamp(2rem, 4vw, 3rem)',
+            color: '#f2ede6',
+            letterSpacing: '0.04em',
+            lineHeight: 1.05,
+            margin: '0 0 1.5rem',
+          }}>
+            Powered by Intelligent Job Management
+          </h2>
+          <p style={{
+            fontFamily: 'var(--font-cormorant), Georgia, serif',
+            fontSize: '1.15rem',
+            color: '#a09890',
+            lineHeight: 1.7,
+            margin: '0 0 2rem',
+          }}>
+            Every Vital Surface project runs through Rllout — our own field service platform built for commercial installers. Real-time job tracking, digital reports, and instant client updates on every install.
+          </p>
+          <a
+            href="https://rllout.co.uk"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontFamily: 'var(--font-barlow), sans-serif',
+              fontSize: '12px',
+              fontWeight: 400,
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
+              color: 'var(--accent-bronze)',
+              borderBottom: '1px solid rgba(140,109,63,0.4)',
+              paddingBottom: '2px',
+              transition: 'color 0.2s, border-color 0.2s',
+            }}
+            onMouseEnter={e => {
+              (e.currentTarget as HTMLElement).style.color = '#f2ede6'
+              ;(e.currentTarget as HTMLElement).style.borderBottomColor = 'rgba(242,237,230,0.5)'
+            }}
+            onMouseLeave={e => {
+              (e.currentTarget as HTMLElement).style.color = 'var(--accent-bronze)'
+              ;(e.currentTarget as HTMLElement).style.borderBottomColor = 'rgba(140,109,63,0.4)'
+            }}
+          >
+            Find out more about Rllout
+          </a>
+        </motion.div>
+      </section>
+
       {/* Intro section */}
       <section style={{ padding: '7rem 2rem', background: 'var(--bg-primary)' }}>
         <div style={{
