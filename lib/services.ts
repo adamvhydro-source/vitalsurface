@@ -1,6 +1,7 @@
 export interface Service {
   slug: string
   title: string
+  descriptor: string
   metaTitle: string
   metaDescription: string
   intro: string
@@ -11,6 +12,7 @@ export const services: Service[] = [
   {
     slug: 'spray-painting-on-site',
     title: 'On-Site Spray Painting',
+    descriptor: 'When the work can\u2019t come to us, we come to the work.',
     metaTitle: 'On-Site Spray Painting | Commercial | Staffordshire & Midlands | Vital Surface',
     metaDescription:
       'Professional on-site spray painting for commercial spaces across the Midlands. Minimal disruption, high-quality finish, trade and direct clients welcome.',
@@ -28,6 +30,7 @@ export const services: Service[] = [
   {
     slug: 'spray-painting-in-unit',
     title: 'In-Unit Spray Painting',
+    descriptor: 'Professional spray finishing in our Staffordshire studio.',
     metaTitle: 'In-Unit Spray Painting Studio | Staffordshire | Vital Surface',
     metaDescription:
       'Bring your components and fixtures to our Staffordshire studio for professional spray finishing. Fast turnaround, trade rates, commercial quality.',
@@ -45,6 +48,7 @@ export const services: Service[] = [
   {
     slug: 'vinyl-wrapping',
     title: 'Vinyl Wrapping',
+    descriptor: 'Cost-effective surface transformation, no respray required.',
     metaTitle: 'Commercial Vinyl Wrapping | Midlands | Vital Surface',
     metaDescription:
       'Professional vinyl wrapping for commercial surfaces, fixtures and vehicles across the Midlands.',
@@ -62,6 +66,7 @@ export const services: Service[] = [
   {
     slug: 'window-tinting',
     title: 'Window Tinting',
+    descriptor: 'Solar control, privacy, and decorative film for commercial spaces.',
     metaTitle: 'Commercial Window Tinting | Staffordshire & Midlands | Vital Surface',
     metaDescription:
       'Professional window tinting and film installation for commercial properties across the Midlands.',
@@ -79,6 +84,7 @@ export const services: Service[] = [
   {
     slug: 'pos-installation',
     title: 'POS Installation',
+    descriptor: 'Retail environments installed exactly as designed.',
     metaTitle: 'POS Installation Service | Retail | UK | Vital Surface',
     metaDescription:
       'Professional point of sale installation for retail environments across the UK.',
@@ -96,6 +102,7 @@ export const services: Service[] = [
   {
     slug: 'signage',
     title: 'Signage',
+    descriptor: 'Fascia, wayfinding, and illuminated signage, managed end to end.',
     metaTitle: 'Commercial Signage Installation | Midlands | Vital Surface',
     metaDescription: 'Commercial signage supply and installation across the Midlands.',
     intro:
@@ -112,6 +119,7 @@ export const services: Service[] = [
   {
     slug: '3d-printing',
     title: '3D Printing',
+    descriptor: 'Bespoke printed components, professionally spray finished.',
     metaTitle: 'Commercial 3D Printing & Finishing | Staffordshire | Vital Surface',
     metaDescription:
       'Bespoke 3D printing and professional finishing for commercial applications.',

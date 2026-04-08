@@ -49,6 +49,32 @@ export default function ServicePageContent({ service }: { service: Service }) {
         </div>
       </section>
 
+      {/* Banner image — placeholder. Replace with real photo at /public/images/services/{slug}.jpg */}
+      <section style={{ background: 'var(--bg-primary)' }}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.6 }}
+          style={{ width: '100%', overflow: 'hidden', background: '#e5e0d8' }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={`https://picsum.photos/seed/vital-service-${service.slug}/1800/720`}
+            alt={`${service.title} — Vital Surface`}
+            width={1800}
+            height={720}
+            loading="lazy"
+            style={{
+              width: '100%',
+              height: 'clamp(280px, 42vw, 560px)',
+              objectFit: 'cover',
+              display: 'block',
+            }}
+          />
+        </motion.div>
+      </section>
+
       {/* Intro */}
       <section style={{ padding: '6rem 2rem', background: 'var(--bg-primary)' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>

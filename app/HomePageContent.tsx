@@ -5,44 +5,13 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import SectorCard from '@/components/SectorCard'
 import CTABanner from '@/components/CTABanner'
+import { services as serviceData } from '@/lib/services'
 
-const services = [
-  {
-    title: 'On-Site Spray Painting',
-    descriptor: 'When the work can\u2019t come to us, we come to the work.',
-    href: '/services/spray-painting-on-site',
-  },
-  {
-    title: 'In-Unit Spray Painting',
-    descriptor: 'Professional spray finishing in our Staffordshire studio.',
-    href: '/services/spray-painting-in-unit',
-  },
-  {
-    title: 'Vinyl Wrapping',
-    descriptor: 'Cost-effective surface transformation, no respray required.',
-    href: '/services/vinyl-wrapping',
-  },
-  {
-    title: 'Window Tinting',
-    descriptor: 'Solar control, privacy, and decorative film for commercial spaces.',
-    href: '/services/window-tinting',
-  },
-  {
-    title: 'POS Installation',
-    descriptor: 'Retail environments installed exactly as designed.',
-    href: '/services/pos-installation',
-  },
-  {
-    title: 'Signage',
-    descriptor: 'Fascia, wayfinding, and illuminated signage, managed end to end.',
-    href: '/services/signage',
-  },
-  {
-    title: '3D Printing',
-    descriptor: 'Bespoke printed components, professionally spray finished.',
-    href: '/services/3d-printing',
-  },
-]
+const services = serviceData.map((s) => ({
+  title: s.title,
+  descriptor: s.descriptor,
+  href: `/services/${s.slug}`,
+}))
 
 const sectors = [
   { title: 'Shop Front Refurbishment', href: '/sectors/shop-front-refurbishment' },
@@ -309,21 +278,44 @@ export default function HomePageContent() {
         </motion.div>
       </section>
 
-      {/* Intro section */}
+      {/* Intro / About — image + text */}
+      {/* Banner image is a placeholder. Replace with real photo at /public/images/home-about.jpg */}
       <section style={{ padding: '7rem 2rem', background: 'var(--bg-primary)' }}>
-        <div style={{
+        <div className="home-about-grid" style={{
           maxWidth: '1280px',
           margin: '0 auto',
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gridTemplateColumns: '1.05fr 1fr',
           gap: '5rem',
-          alignItems: 'start',
+          alignItems: 'center',
         }}>
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.5 }}
+            style={{ width: '100%', overflow: 'hidden', background: '#e5e0d8' }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://picsum.photos/seed/vital-about/1200/1400"
+              alt="Vital Surface team at work on a commercial finishing project"
+              width={1200}
+              height={1400}
+              loading="lazy"
+              style={{
+                width: '100%',
+                height: 'clamp(360px, 56vw, 620px)',
+                objectFit: 'cover',
+                display: 'block',
+              }}
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.5, delay: 0.1 }}
           >
             <span className="gold-line" />
             <h2 style={{
@@ -332,17 +324,10 @@ export default function HomePageContent() {
               color: 'var(--text-primary)',
               lineHeight: 1,
               letterSpacing: '0.03em',
-              margin: 0,
+              margin: '0 0 2rem',
             }}>
               We Finish What Others Start
             </h2>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
             <p style={{
               fontSize: '1rem',
               fontWeight: 300,
@@ -366,6 +351,14 @@ export default function HomePageContent() {
             </Link>
           </motion.div>
         </div>
+        <style>{`
+          @media (max-width: 900px) {
+            .home-about-grid {
+              grid-template-columns: 1fr !important;
+              gap: 3rem !important;
+            }
+          }
+        `}</style>
       </section>
 
       {/* Sectors section */}

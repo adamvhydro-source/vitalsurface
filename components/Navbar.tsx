@@ -177,6 +177,32 @@ export default function Navbar() {
                         {link.label}
                       </Link>
                     ))}
+                    <div style={{ borderTop: '1px solid var(--border)', margin: '0.5rem 0 0' }} />
+                    <Link
+                      href="/services"
+                      onClick={() => setServicesOpen(false)}
+                      style={{
+                        display: 'block',
+                        padding: '0.75rem 1.25rem',
+                        fontFamily: 'var(--font-barlow), sans-serif',
+                        fontWeight: 400,
+                        fontSize: '13px',
+                        letterSpacing: '0.12em',
+                        textTransform: 'uppercase',
+                        color: 'var(--accent-bronze)',
+                        transition: 'color 0.15s, padding-left 0.15s',
+                      }}
+                      onMouseEnter={e => {
+                        (e.target as HTMLElement).style.color = 'var(--text-primary)'
+                        ;(e.target as HTMLElement).style.paddingLeft = '1.6rem'
+                      }}
+                      onMouseLeave={e => {
+                        (e.target as HTMLElement).style.color = 'var(--accent-bronze)'
+                        ;(e.target as HTMLElement).style.paddingLeft = '1.25rem'
+                      }}
+                    >
+                      View all services →
+                    </Link>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -254,6 +280,32 @@ export default function Navbar() {
                         {link.label}
                       </Link>
                     ))}
+                    <div style={{ borderTop: '1px solid var(--border)', margin: '0.5rem 0 0' }} />
+                    <Link
+                      href="/sectors"
+                      onClick={() => setSectorsOpen(false)}
+                      style={{
+                        display: 'block',
+                        padding: '0.75rem 1.25rem',
+                        fontFamily: 'var(--font-barlow), sans-serif',
+                        fontWeight: 400,
+                        fontSize: '13px',
+                        letterSpacing: '0.12em',
+                        textTransform: 'uppercase',
+                        color: 'var(--accent-bronze)',
+                        transition: 'color 0.15s, padding-left 0.15s',
+                      }}
+                      onMouseEnter={e => {
+                        (e.target as HTMLElement).style.color = 'var(--text-primary)'
+                        ;(e.target as HTMLElement).style.paddingLeft = '1.6rem'
+                      }}
+                      onMouseLeave={e => {
+                        (e.target as HTMLElement).style.color = 'var(--accent-bronze)'
+                        ;(e.target as HTMLElement).style.paddingLeft = '1.25rem'
+                      }}
+                    >
+                      View all sectors →
+                    </Link>
                   </motion.div>
                 )}
               </AnimatePresence>

@@ -1,6 +1,7 @@
 export interface Sector {
   slug: string
   title: string
+  descriptor: string
   metaTitle: string
   metaDescription: string
   intro: string
@@ -11,6 +12,7 @@ export const sectors: Sector[] = [
   {
     slug: 'shop-front-refurbishment',
     title: 'Shop Front Refurbishment',
+    descriptor: 'Frames, fascias, and signage refurbished as one package.',
     metaTitle: 'Shop Front Refurbishment | Commercial Surface Finishing | Vital Surface',
     metaDescription:
       'Professional shop front refurbishment across the Midlands. Spray painting, vinyl wrapping, signage, and window film — one contractor, clean results.',
@@ -28,6 +30,7 @@ export const sectors: Sector[] = [
   {
     slug: 'washroom-refurbishment',
     title: 'Washroom Refurbishment',
+    descriptor: 'Surface finishing built for high-traffic, high-moisture environments.',
     metaTitle: 'Commercial Washroom Refurbishment | Surface Finishing | Vital Surface',
     metaDescription:
       'Surface finishing specialists for commercial washroom refurbishments across the Midlands. Trade and direct clients welcome.',
@@ -45,6 +48,7 @@ export const sectors: Sector[] = [
   {
     slug: 'pub-and-hospitality',
     title: 'Pub & Hospitality',
+    descriptor: 'Bar fronts, booths, and ceilings refreshed without shutting trade.',
     metaTitle: 'Pub & Hospitality Surface Finishing | Midlands | Vital Surface',
     metaDescription:
       'Surface finishing for pubs, bars, and hospitality venues across the Midlands. On-site spray painting, vinyl wrapping, and signage installation.',
@@ -62,6 +66,7 @@ export const sectors: Sector[] = [
   {
     slug: 'retail-fit-out',
     title: 'Retail Fit-Out',
+    descriptor: 'Schedule-driven finishing for retail programmes that can\u2019t slip.',
     metaTitle: 'Retail Fit-Out Surface Finishing | Midlands & UK | Vital Surface',
     metaDescription:
       'Surface finishing for retail fit-outs across the Midlands and UK. Spray painting, vinyl wrapping, POS installation, and signage.',
@@ -79,6 +84,7 @@ export const sectors: Sector[] = [
   {
     slug: 'office-refurbishment',
     title: 'Office Refurbishment',
+    descriptor: 'Phased refits and full floors, integrated with the wider programme.',
     metaTitle: 'Office Refurbishment Surface Finishing | Midlands | Vital Surface',
     metaDescription:
       'Surface finishing for office refurbishments across the Midlands. Spray painting, vinyl wrapping, signage, and window film.',
