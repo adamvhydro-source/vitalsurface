@@ -62,7 +62,6 @@ export default function Footer() {
               More Than Surface Deep.
             </p>
             <p style={{
-              fontFamily: 'var(--font-cormorant)',
               fontSize: '0.95rem',
               color: 'var(--text-secondary)',
               lineHeight: 1.6,
@@ -89,8 +88,7 @@ export default function Footer() {
                   <Link
                     href={link.href}
                     style={{
-                      fontFamily: 'var(--font-cormorant)',
-                      fontSize: '1rem',
+                      fontSize: '0.95rem',
                       color: 'var(--text-secondary)',
                       transition: 'color 0.15s',
                     }}
@@ -121,8 +119,7 @@ export default function Footer() {
                   <Link
                     href={link.href}
                     style={{
-                      fontFamily: 'var(--font-cormorant)',
-                      fontSize: '1rem',
+                      fontSize: '0.95rem',
                       color: 'var(--text-secondary)',
                       transition: 'color 0.15s',
                     }}
@@ -148,15 +145,14 @@ export default function Footer() {
               CONTACT
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <p style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1rem', color: 'var(--text-secondary)', margin: 0 }}>
+              <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', margin: 0 }}>
                 Stone, Staffordshire
               </p>
-              <p style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1rem', color: 'var(--text-secondary)', margin: 0 }}>
+              <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', margin: 0 }}>
                 Serving the Midlands<br />and beyond.
               </p>
               <Link href="/contact" style={{
-                fontFamily: 'var(--font-cormorant)',
-                fontSize: '1rem',
+                fontSize: '0.95rem',
                 color: 'var(--accent-bronze)',
                 transition: 'opacity 0.15s',
               }}>
@@ -177,16 +173,14 @@ export default function Footer() {
           gap: '1rem',
         }}>
           <p style={{
-            fontFamily: 'var(--font-cormorant)',
-            fontSize: '0.9rem',
+            fontSize: '0.85rem',
             color: 'var(--text-secondary)',
             margin: 0,
           }}>
             © 2026 Vital Surface. All rights reserved.
           </p>
           <p style={{
-            fontFamily: 'var(--font-cormorant)',
-            fontSize: '0.9rem',
+            fontSize: '0.85rem',
             color: 'var(--text-secondary)',
             margin: 0,
           }}>

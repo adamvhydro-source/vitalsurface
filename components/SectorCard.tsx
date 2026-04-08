@@ -65,11 +65,11 @@ export default function SectorCard({ title, href, index = 0 }: SectorCardProps) 
           {title}
         </p>
         <p style={{
-          fontFamily: 'var(--font-cormorant)',
-          fontSize: '0.9rem',
+          fontSize: '11px',
+          letterSpacing: '0.18em',
+          textTransform: 'uppercase',
           color: 'var(--accent-bronze)',
           margin: 0,
-          letterSpacing: '0.05em',
         }}>
           View sector →
         </p>

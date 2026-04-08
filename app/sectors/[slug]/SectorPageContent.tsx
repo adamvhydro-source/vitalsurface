@@ -94,8 +94,8 @@ export default function SectorPageContent({ sector }: { sector: Sector }) {
                     display: 'flex',
                     alignItems: 'flex-start',
                     gap: '1rem',
-                    fontFamily: 'var(--font-cormorant)',
-                    fontSize: '1.1rem',
+                    fontSize: '1rem',
+                    fontWeight: 300,
                     color: 'var(--text-secondary)',
                     lineHeight: 1.6,
                   }}

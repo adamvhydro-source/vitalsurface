@@ -109,8 +109,8 @@ export default function ContactPageContent() {
                   Message Received
                 </p>
                 <p style={{
-                  fontFamily: 'var(--font-cormorant)',
-                  fontSize: '1.1rem',
+                  fontSize: '1rem',
+                  fontWeight: 300,
                   color: 'var(--text-secondary)',
                   lineHeight: 1.6,
                 }}>
@@ -204,9 +204,8 @@ export default function ContactPageContent() {
 
                 {formState === 'error' && (
                   <p style={{
-                    fontFamily: 'var(--font-cormorant)',
                     color: '#e05555',
-                    fontSize: '1rem',
+                    fontSize: '0.95rem',
                   }}>
                     Something went wrong. Please try again or contact us directly.
                   </p>
@@ -243,21 +242,21 @@ export default function ContactPageContent() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <div>
                 <p style={{ fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--accent-bronze)', marginBottom: '0.4rem' }}>LOCATION</p>
-                <p style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0 }}>
+                <p style={{ fontSize: '1rem', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0 }}>
                   Stone, Staffordshire<br />
                   Midlands, UK
                 </p>
               </div>
               <div>
                 <p style={{ fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--accent-bronze)', marginBottom: '0.4rem' }}>COVERAGE</p>
-                <p style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0 }}>
+                <p style={{ fontSize: '1rem', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0 }}>
                   Midlands as standard.<br />
                   Nationally capable.
                 </p>
               </div>
               <div>
                 <p style={{ fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--accent-bronze)', marginBottom: '0.4rem' }}>CLIENTS</p>
-                <p style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0 }}>
+                <p style={{ fontSize: '1rem', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0 }}>
                   Trade and direct.<br />
                   Contractors welcome.
                 </p>

@@ -272,8 +272,8 @@ export default function HomePageContent() {
             Powered by Intelligent Job Management
           </h2>
           <p style={{
-            fontFamily: 'var(--font-cormorant), Georgia, serif',
-            fontSize: '1.15rem',
+            fontSize: '1rem',
+            fontWeight: 300,
             color: '#a09890',
             lineHeight: 1.7,
             margin: '0 0 2rem',
@@ -344,8 +344,8 @@ export default function HomePageContent() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <p style={{
-              fontFamily: 'var(--font-cormorant)',
-              fontSize: '1.2rem',
+              fontSize: '1rem',
+              fontWeight: 300,
               color: 'var(--text-secondary)',
               lineHeight: 1.8,
               marginBottom: '1.5rem',
@@ -353,8 +353,8 @@ export default function HomePageContent() {
               Most fit-out programmes have one problem in common: the last trade in gets squeezed. Surface finishing lands at the end of the schedule, after every other trade has had their time — and somehow it&apos;s still expected to look perfect.
             </p>
             <p style={{
-              fontFamily: 'var(--font-cormorant)',
-              fontSize: '1.2rem',
+              fontSize: '1rem',
+              fontWeight: 300,
               color: 'var(--text-secondary)',
               lineHeight: 1.8,
               marginBottom: '2rem',
@@ -437,8 +437,8 @@ export default function HomePageContent() {
                   {item.heading}
                 </h3>
                 <p style={{
-                  fontFamily: 'var(--font-cormorant)',
-                  fontSize: '1.05rem',
+                  fontSize: '0.95rem',
+                  fontWeight: 300,
                   color: 'var(--text-secondary)',
                   lineHeight: 1.7,
                   margin: 0,

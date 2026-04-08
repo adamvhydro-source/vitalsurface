@@ -105,8 +105,8 @@ export default function ServicePageContent({ service }: { service: Service }) {
                     display: 'flex',
                     alignItems: 'flex-start',
                     gap: '1rem',
-                    fontFamily: 'var(--font-cormorant)',
-                    fontSize: '1.1rem',
+                    fontSize: '1rem',
+                    fontWeight: 300,
                     color: 'var(--text-secondary)',
                     lineHeight: 1.6,
                   }}
