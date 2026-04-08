@@ -15,9 +15,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const sector = getSectorBySlug(slug)
   if (!sector) return {}
+  const url = `/sectors/${sector.slug}`
   return {
-    title: sector.metaTitle,
+    title: sector.title,
     description: sector.metaDescription,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${sector.title} | Vital Surface – Commercial Surface Finishing, Staffordshire`,
+      description: sector.metaDescription,
+      type: 'website',
+      url,
+    },
   }
 }
 

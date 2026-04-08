@@ -15,9 +15,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const service = getServiceBySlug(slug)
   if (!service) return {}
+  const url = `/services/${service.slug}`
   return {
-    title: service.metaTitle,
+    title: service.title,
     description: service.metaDescription,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${service.title} | Vital Surface – Commercial Surface Finishing, Staffordshire`,
+      description: service.metaDescription,
+      type: 'website',
+      url,
+    },
   }
 }
 

@@ -28,11 +28,18 @@ const barlow = Barlow({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://vitalsurface.co.uk'),
   title: {
-    template: '%s | Vital Surface',
-    default: 'Vital Surface | Commercial Surface Finishing',
+    template: '%s | Vital Surface – Commercial Surface Finishing, Staffordshire',
+    default: 'Vital Surface – Commercial Surface Finishing, Staffordshire',
   },
-  description: 'Commercial surface finishing across the Midlands.',
+  description:
+    'Vital Surface delivers expert on-site spray painting, vinyl wrapping, window tinting and commercial fit-out finishing across the UK. Based in Stone, Staffordshire.',
+  openGraph: {
+    type: 'website',
+    siteName: 'Vital Surface',
+    locale: 'en_GB',
+  },
 }
 
 export default function RootLayout({

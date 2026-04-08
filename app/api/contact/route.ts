@@ -1,7 +1,5 @@
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 export async function POST(request: Request) {
   try {
     const body = await request.json()
@@ -10,6 +8,14 @@ export async function POST(request: Request) {
     if (!name || !email || !message) {
       return Response.json({ error: 'Missing required fields' }, { status: 400 })
     }
+
+    const apiKey = process.env.RESEND_API_KEY
+    if (!apiKey) {
+      console.error('RESEND_API_KEY is not set')
+      return Response.json({ error: 'Email service not configured' }, { status: 500 })
+    }
+
+    const resend = new Resend(apiKey)
 
     const { error } = await resend.emails.send({
       from: 'Vital Surface <onboarding@resend.dev>', // TEMP: Resend shared sender — swap back to noreply@vitalsurface.co.uk once the domain is verified
