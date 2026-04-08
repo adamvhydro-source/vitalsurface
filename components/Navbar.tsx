@@ -58,6 +58,10 @@ export default function Navbar() {
     return () => { document.body.style.overflow = '' }
   }, [mobileOpen])
 
+  // Unscrolled: cream text over dark hero. Scrolled: dark text on light nav.
+  const navTextColor = scrolled ? 'var(--text-primary)' : '#f2ede6'
+  const navWordmarkColor = scrolled ? 'var(--accent-bronze)' : '#f2ede6'
+
   const dropdownVariants = {
     hidden: { opacity: 0, y: -8, pointerEvents: 'none' as const },
     visible: { opacity: 1, y: 0, pointerEvents: 'auto' as const },
@@ -90,9 +94,10 @@ export default function Navbar() {
           <Link href="/" style={{
             fontFamily: 'var(--font-bebas)',
             fontSize: '1.6rem',
-            color: 'var(--accent-bronze)',
+            color: navWordmarkColor,
             letterSpacing: '0.1em',
             lineHeight: 1,
+            transition: 'color 0.3s',
           }}>
             Vital Surface
           </Link>
@@ -106,7 +111,7 @@ export default function Navbar() {
                 style={{
                   background: 'none',
                   border: 'none',
-                  color: 'var(--text-primary)',
+                  color: navTextColor,
                   fontFamily: 'var(--font-cormorant)',
                   fontStyle: 'italic',
                   fontSize: '1.05rem',
@@ -115,6 +120,7 @@ export default function Navbar() {
                   alignItems: 'center',
                   gap: '0.4rem',
                   padding: 0,
+                  transition: 'color 0.3s',
                 }}
               >
                 Services
@@ -177,7 +183,7 @@ export default function Navbar() {
                 style={{
                   background: 'none',
                   border: 'none',
-                  color: 'var(--text-primary)',
+                  color: navTextColor,
                   fontFamily: 'var(--font-cormorant)',
                   fontStyle: 'italic',
                   fontSize: '1.05rem',
@@ -186,6 +192,7 @@ export default function Navbar() {
                   alignItems: 'center',
                   gap: '0.4rem',
                   padding: 0,
+                  transition: 'color 0.3s',
                 }}
               >
                 Sectors
@@ -247,11 +254,11 @@ export default function Navbar() {
                 fontFamily: 'var(--font-cormorant)',
                 fontStyle: 'italic',
                 fontSize: '1.05rem',
-                color: 'var(--text-primary)',
-                transition: 'color 0.15s',
+                color: navTextColor,
+                transition: 'color 0.3s',
               }}
               onMouseEnter={e => (e.target as HTMLElement).style.color = 'var(--accent-bronze)'}
-              onMouseLeave={e => (e.target as HTMLElement).style.color = 'var(--text-primary)'}
+              onMouseLeave={e => (e.target as HTMLElement).style.color = navTextColor}
             >
               Our Work
             </Link>
@@ -265,7 +272,7 @@ export default function Navbar() {
           <button
             onClick={() => setMobileOpen(true)}
             className="show-mobile"
-            style={{ background: 'none', border: 'none', color: 'var(--text-primary)', padding: '0.5rem' }}
+            style={{ background: 'none', border: 'none', color: navTextColor, padding: '0.5rem', transition: 'color 0.3s' }}
             aria-label="Open menu"
           >
             <svg width="24" height="18" viewBox="0 0 24 18" fill="none">
@@ -364,7 +371,7 @@ export default function Navbar() {
                   fontSize: '1.5rem',
                   color: 'var(--text-primary)',
                   padding: '0.5rem 0',
-                  borderBottom: '1px solid #2e2e2e',
+                  borderBottom: '1px solid var(--border)',
                   marginBottom: '2rem',
                   display: 'block',
                 }}
