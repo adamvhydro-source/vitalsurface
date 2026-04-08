@@ -12,9 +12,10 @@ export async function POST(request: Request) {
     }
 
     const { error } = await resend.emails.send({
-      from: 'Vital Surface <noreply@vitalsurface.co.uk>', // Update this to your verified domain
-      to: ['hello@vitalsurface.co.uk'], // Update this to the correct recipient email
-      subject: `New enquiry from ${name}${company ? ` — ${company}` : ''}`,
+      from: 'Vital Surface <onboarding@resend.dev>', // TEMP: Resend shared sender — swap back to noreply@vitalsurface.co.uk once the domain is verified
+      to: ['adam.vhydro@gmail.com'], // TEMP: testing recipient — revert to sales@vitalhydrographic.co.uk once vitalsurface.co.uk is verified in Resend
+      replyTo: email,
+      subject: 'New Enquiry – Vital Surface',
       text: [
         `Name: ${name}`,
         company ? `Company: ${company}` : '',
