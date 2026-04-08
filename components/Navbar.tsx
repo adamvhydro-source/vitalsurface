@@ -410,6 +410,23 @@ export default function Navbar() {
                     {link.label}
                   </Link>
                 ))}
+                <Link
+                  href="/services"
+                  onClick={() => setMobileOpen(false)}
+                  style={{
+                    display: 'block',
+                    fontFamily: 'var(--font-barlow), sans-serif',
+                    fontWeight: 400,
+                    fontSize: '14px',
+                    letterSpacing: '0.12em',
+                    textTransform: 'uppercase',
+                    color: 'var(--accent-bronze)',
+                    padding: '0.85rem 0',
+                    borderBottom: '1px solid var(--border)',
+                  }}
+                >
+                  View all services →
+                </Link>
               </div>
               <div style={{ marginBottom: '2rem' }}>
                 <p style={{ fontFamily: 'var(--font-bebas)', fontSize: '0.75rem', letterSpacing: '0.2em', color: 'var(--accent-bronze)', marginBottom: '1rem' }}>SECTORS</p>
@@ -433,6 +450,23 @@ export default function Navbar() {
                     {link.label}
                   </Link>
                 ))}
+                <Link
+                  href="/sectors"
+                  onClick={() => setMobileOpen(false)}
+                  style={{
+                    display: 'block',
+                    fontFamily: 'var(--font-barlow), sans-serif',
+                    fontWeight: 400,
+                    fontSize: '14px',
+                    letterSpacing: '0.12em',
+                    textTransform: 'uppercase',
+                    color: 'var(--accent-bronze)',
+                    padding: '0.85rem 0',
+                    borderBottom: '1px solid var(--border)',
+                  }}
+                >
+                  View all sectors →
+                </Link>
               </div>
               <Link
                 href="/work"
